@@ -98,7 +98,7 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f2ee; color: #1a1a1a; 
 .nav-link.active { color: #c7999b; }
 
 /* SECTIONS */
-.section { display: none; }
+.section { display: block; }
 .section.active { display: block; }
 
 /* PAGE CONTENT */
@@ -117,7 +117,7 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f2ee; color: #1a1a1a; 
 .page { max-width: 860px; margin: 0 auto; padding: 2rem 2rem 5rem; }
 
 /* ── SECTIONS ── */
-.section { display: none; }
+.section { display: block; }
 .section.active { display: block; }
 
 /* ── PASSWORD OVERLAY ── */
@@ -186,7 +186,7 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f2ee; color: #1a1a1a; 
   
 
   /* SECTIONS */
-  .section { display: none; }
+  .section { display: block; }
   .section.active { display: block; }
 
   /* HEADER */
@@ -691,6 +691,14 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f2ee; color: #1a1a1a; 
   gap: 14px;
 }
 #pl-overlay.visible { display: flex; }
+
+/* Section dividers */
+.section { 
+  border-top: 2px solid var(--border); 
+  padding-top: 1.5rem; 
+  margin-top: 1.5rem;
+}
+.section:first-child { border-top: none; }
 </style>
 </head>
 <body>
@@ -736,6 +744,7 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f2ee; color: #1a1a1a; 
     <div class="nav-link" onclick="go('mockup')">IG Mockup</div>
     <div class="nav-group-title">Creative</div>
     <div class="nav-link" onclick="go('teaser')">Teaser Grid</div>
+    <div class="nav-link" onclick="go('print')">Posters &amp; Stickers</div>
     <div class="nav-group-title">Private</div>
     <div class="nav-link" onclick="go('pl')">P&amp;L 🔒</div>
   </div>
@@ -1069,6 +1078,21 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f2ee; color: #1a1a1a; 
           <tr><td>06</td><td><strong>Community</strong></td><td>Events · partner collabs · tag reposts · student spotlights</td><td>1×/wk</td></tr>
         </tbody>
       </table></div></div>
+
+    <div class="sec">
+      <div class="sl">Signature content lines</div>
+      <div style="background:var(--white);border:1px solid var(--border2);border-radius:10px;overflow:hidden">
+        <table style="width:100%;border-collapse:collapse;font-size:13px">
+          <thead><tr style="background:var(--sand)"><th style="padding:9px 12px;text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--text2);border-bottom:1px solid var(--border)">Line</th><th style="padding:9px 12px;text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--text2);border-bottom:1px solid var(--border)">Caption copy</th><th style="padding:9px 12px;text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--text2);border-bottom:1px solid var(--border)">Use</th></tr></thead>
+          <tbody>
+            <tr><td style="padding:9px 12px;border-bottom:1px solid var(--border2);font-weight:500">"did you shake?"</td><td style="padding:9px 12px;border-bottom:1px solid var(--border2);color:var(--text2)">your muscles shook. that means it worked.<br>did you shake? · reform. · tram road, central</td><td style="padding:9px 12px;border-bottom:1px solid var(--border2);color:var(--text2)">Post-class reels · changing room mirror quote · recurring series</td></tr>
+            <tr style="background:var(--sand2)"><td style="padding:9px 12px;border-bottom:1px solid var(--border2);font-weight:500">"hundreds club"</td><td style="padding:9px 12px;border-bottom:1px solid var(--border2);color:var(--text2)">if you know, you know.<br>hundreds club · reform. · tram road, central</td><td style="padding:9px 12px;border-bottom:1px solid var(--border2);color:var(--text2)">Reformer series caption · potential merch line · community badge</td></tr>
+            <tr><td style="padding:9px 12px;border-bottom:1px solid var(--border2);font-weight:500">"ballet core vibes"</td><td style="padding:9px 12px;border-bottom:1px solid var(--border2);color:var(--text2)">ballet core. reformer resistance. one class.<br>your posture will never be the same.</td><td style="padding:9px 12px;border-bottom:1px solid var(--border2);color:var(--text2)">Ballet Core reels · Clara's signature class content · reel overlay text</td></tr>
+            <tr style="background:var(--sand2)"><td style="padding:9px 12px;font-weight:500">"reset. reform. repeat."</td><td style="padding:9px 12px;color:var(--text2)">reset. reform. repeat.<br>reform. · tram road, central 🔗</td><td style="padding:9px 12px;color:var(--text2)">Closing line for all post captions · tagline · mirror decal</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
     </div>
     <div class="sec">
       <div class="sl">Pre-launch 8-week rollout</div>
@@ -1095,6 +1119,23 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f2ee; color: #1a1a1a; 
       <div class="mirror-quote" style="border-left-color:var(--rosy)"><div class="mq-text">"Pilates is hell. That's why you'd look devilish hot."</div><div class="mq-placement">Changing room mirror · tag magnet · selfie spot</div></div>
       <div class="mirror-quote"><div class="mq-text">"reset. reform. repeat."</div><div class="mq-placement">Entry / door frame</div></div>
       <div class="mirror-quote"><div class="mq-text">"this is your hour."</div><div class="mq-placement">Secondary position on left mirror wall</div></div>
+      <div class="mirror-quote" style="border-left-color:var(--rosy)"><div class="mq-text">"did you shake?"</div><div class="mq-placement">Changing room / post-class · your muscles shook. that means it worked.</div></div>
+      <div class="mirror-quote"><div class="mq-text">"hundreds club."</div><div class="mq-placement">Studio wall or merch · if you know, you know.</div></div>
+      <div class="mirror-quote" style="border-left-color:var(--rosy)"><div class="mq-text">"ballet core vibes."</div><div class="mq-placement">Ballet Core class content · caption / reel overlay</div></div>
+    </div>
+
+    <div class="sec">
+      <div class="sl">Hidden easter egg — tent card</div>
+      <div class="callout" style="border-left-color:var(--rosy)">
+        <div class="callout-title">🃏 Hidden tent card copy</div>
+        <div class="callout-body" style="font-style:italic">"did you know clenching your core helps tighten your pelvic floor — aka your... p***y cat?"</div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;margin-top:.75rem">
+        <div style="background:var(--white);border:1px solid var(--border2);border-radius:8px;padding:.875rem 1rem"><div style="font-weight:500;font-size:12px;margin-bottom:3px">Inside the carriage</div><div style="font-size:11px;color:var(--text2)">Visible only when lying down. Clients discover it mid-class. Maximum impact.</div></div>
+        <div style="background:var(--white);border:1px solid var(--border2);border-radius:8px;padding:.875rem 1rem"><div style="font-weight:500;font-size:12px;margin-bottom:3px">Under the footbar</div><div style="font-size:11px;color:var(--text2)">Only visible when feet are up. Perfectly timed surprise.</div></div>
+        <div style="background:var(--white);border:1px solid var(--border2);border-radius:8px;padding:.875rem 1rem"><div style="font-weight:500;font-size:12px;margin-bottom:3px">Back of changing room door</div><div style="font-size:11px;color:var(--text2)">Last thing you read before leaving. You will tell your friends.</div></div>
+        <div style="background:var(--white);border:1px solid var(--border2);border-radius:8px;padding:.875rem 1rem"><div style="font-weight:500;font-size:12px;margin-bottom:3px">Bottom of water bottle label</div><div style="font-size:11px;color:var(--text2)">Tiny print. Easter egg for anyone who reads the whole label.</div></div>
+      </div>
     </div>
     <div class="sec">
       <div class="sl">Instagrammable spots</div>
@@ -1207,43 +1248,288 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f2ee; color: #1a1a1a; 
     </div>
   </div>
 
-  <!-- WEBSITE -->
-  <div id="section-website" class="section">
+<div id="section-website" class="section">
+  <div class="sec">
+    <div class="sl">Platform — Squarespace</div>
+    <div style="background:var(--white);border:1px solid var(--border2);border-radius:10px;overflow:hidden;margin-bottom:1rem">
+      <table style="width:100%;border-collapse:collapse;font-size:13px">
+        <thead><tr style="background:var(--sand)"><th style="padding:9px 14px;text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--text2);border-bottom:1px solid var(--border)">Option</th><th style="padding:9px 14px;text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--text2);border-bottom:1px solid var(--border)">Pros</th><th style="padding:9px 14px;text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--text2);border-bottom:1px solid var(--border)">Cost HKD</th></tr></thead>
+        <tbody>
+          <tr style="background:#f0fdf4"><td style="padding:9px 14px;border-bottom:1px solid var(--border2);font-weight:500">Squarespace ★ Recommended</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);color:var(--text2)">Built-in booking embed (Mindbody/Hapana), Stripe payments, bilingual pages, self-managed</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2)">~180/mo Basic Commerce</td></tr>
+          <tr><td style="padding:9px 14px;font-weight:500">Framer (Year 2)</td><td style="padding:9px 14px;color:var(--text2)">More design control, faster, better animations — needs developer to maintain</td><td style="padding:9px 14px">~120/mo + dev fees</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="background:var(--sand);border-radius:10px;padding:1rem 1.25rem;border-left:3px solid var(--blush);font-size:12px;color:var(--text2);line-height:1.7;margin-bottom:1rem">
+      Domain: get <strong>reform.hk</strong> from <strong>names.hk</strong> (~HKD 200/yr). Point to Squarespace. Booking via Mindbody/Hapana embed. Packs sold via Stripe. Bilingual EN/TC toggle built into Squarespace pages.
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sl">Website copy — English + 繁中 · all 7 sections</div>
+
+    <!-- §1 HERO -->
+    <div style="background:var(--white);border:1px solid var(--border2);border-radius:10px;overflow:hidden;margin-bottom:10px">
+      <div style="background:var(--ink);padding:10px 16px;display:flex;justify-content:space-between;align-items:center">
+        <div style="font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;color:var(--sand)">§1 — Hero</div>
+        <div style="font-size:10px;color:var(--gray)">Full dark · above fold</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0">
+        <div style="padding:14px 16px;border-right:1px solid var(--border2)">
+          <div style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--blush);margin-bottom:8px">English</div>
+          <div style="font-family:'Unbounded',sans-serif;font-size:15px;font-weight:900;line-height:1.15;margin-bottom:10px">REFORMER.<br><span style="color:var(--blush)">BARREFORMER.</span><br>CENTRAL HK.</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.6;margin-bottom:10px">Boutique pilates. Max 6 per class.<br>9/F Full View Building · tram road, central.</div>
+          <div style="font-size:11px;color:var(--blush)">CTA 1: Book intro class — HKD 150 →</div>
+          <div style="font-size:11px;color:var(--text3);margin-top:2px">CTA 2: Student offer →</div>
+        </div>
+        <div style="padding:14px 16px">
+          <div style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--rosy);margin-bottom:8px">繁體中文</div>
+          <div style="font-family:'Unbounded',sans-serif;font-size:15px;font-weight:900;line-height:1.15;margin-bottom:10px">REFORMER.<br><span style="color:var(--blush)">BARREFORMER.</span><br>中環.</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.6;margin-bottom:10px">精品普拉提。每班最多6人。<br>中環電車路 · 富偉商業大廈9樓</div>
+          <div style="font-size:11px;color:var(--blush)">CTA 1: 預約體驗課 — HKD 150 →</div>
+          <div style="font-size:11px;color:var(--text3);margin-top:2px">CTA 2: 學生優惠 →</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- §2 WHAT IS REFORM -->
+    <div style="background:var(--white);border:1px solid var(--border2);border-radius:10px;overflow:hidden;margin-bottom:10px">
+      <div style="background:var(--ink);padding:10px 16px;display:flex;justify-content:space-between;align-items:center">
+        <div style="font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;color:var(--sand)">§2 — What is Reform.</div>
+        <div style="font-size:10px;color:var(--gray)">Founder statement</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0">
+        <div style="padding:14px 16px;border-right:1px solid var(--border2)">
+          <div style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--blush);margin-bottom:8px">English</div>
+          <div style="font-size:13px;color:var(--text);line-height:1.8;margin-bottom:8px">Reform. is a boutique reformer pilates studio in the heart of Central. Founded by Kylie — a lifelong gym rat and semi-professional dancer who wanted a studio that was serious without being intimidating.</div>
+          <div style="font-size:13px;color:var(--text);line-height:1.8">We cap every class at 6. That's not a limitation — it's the point. You get the machine, the space, and the attention you came for.</div>
+          <div style="font-size:11px;color:var(--blush);margin-top:8px;font-style:italic">reset. reform. repeat.</div>
+        </div>
+        <div style="padding:14px 16px">
+          <div style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--rosy);margin-bottom:8px">繁體中文</div>
+          <div style="font-size:13px;color:var(--text);line-height:1.8;margin-bottom:8px">Reform. 係中環嘅精品普拉提工作室。由 Kylie 創辦 — 一個健身狂兼半職業舞蹈員，想打造一間認真但唔嚇人嘅工作室。</div>
+          <div style="font-size:13px;color:var(--text);line-height:1.8">每班只收6人。唔係限制，係承諾。你嚟嘅係一部機、一個空間、同埋真正嘅關注。</div>
+          <div style="font-size:11px;color:var(--blush);margin-top:8px;font-style:italic">重置。改變。重複。</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- §3 CLASSES -->
+    <div style="background:var(--white);border:1px solid var(--border2);border-radius:10px;overflow:hidden;margin-bottom:10px">
+      <div style="background:var(--ink);padding:10px 16px;display:flex;justify-content:space-between;align-items:center">
+        <div style="font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;color:var(--sand)">§3 — Classes</div>
+        <div style="font-size:10px;color:var(--gray)">Card grid · each with level pill + Book →</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0">
+        <div style="padding:14px 16px;border-right:1px solid var(--border2)">
+          <div style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--blush);margin-bottom:8px">English</div>
+          <div style="font-size:12px;color:var(--text);line-height:2">
+            <strong>Intro to Pilates</strong> — Your first time on the machine. We make it easy. HKD 150.<br>
+            <strong>Reformer — Build / Flow / Sculpt</strong> — Progressive full-body work. HKD 350–380.<br>
+            <strong>Jumpboard</strong> — Low impact, high heart rate. HKD 370.<br>
+            <strong>Ballet Core</strong> — Ballet technique meets reformer resistance. HKD 370.<br>
+            <strong>Barreformer</strong> — Hong Kong's first. Barre + reformer in one class. HKD 380.<br>
+            <strong>Advanced</strong> — For the regulars. Max 4–5 per class. HKD 400–420.<br>
+            <strong>Privates</strong> — 1:1 or duet. Fully customised. From HKD 650.
+          </div>
+        </div>
+        <div style="padding:14px 16px">
+          <div style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--rosy);margin-bottom:8px">繁體中文</div>
+          <div style="font-size:12px;color:var(--text);line-height:2">
+            <strong>普拉提入門</strong> — 第一次上機？我哋帶你入門。HKD 150。<br>
+            <strong>Reformer — Build / Flow / Sculpt</strong> — 全身訓練，循序漸進。HKD 350–380。<br>
+            <strong>彈跳板課</strong> — 低衝擊，高心率。HKD 370。<br>
+            <strong>Ballet Core</strong> — 芭蕾技巧 × 彈簧床阻力。HKD 370。<br>
+            <strong>Barreformer</strong> — 香港首創。Barre + 彈簧床合一。HKD 380。<br>
+            <strong>進階課</strong> — 熟客專屬。每班最多4–5人。HKD 400–420。<br>
+            <strong>私人課</strong> — 1對1或雙人。量身訂製。由 HKD 650 起。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- §4 BARREFORMER -->
+    <div style="background:var(--white);border:1px solid var(--border2);border-radius:10px;overflow:hidden;margin-bottom:10px">
+      <div style="background:var(--ink);padding:10px 16px;display:flex;justify-content:space-between;align-items:center">
+        <div style="font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;color:var(--sand)">§4 — Barreformer spotlight</div>
+        <div style="font-size:10px;color:var(--gray)">Full dark section</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0">
+        <div style="padding:14px 16px;border-right:1px solid var(--border2)">
+          <div style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--blush);margin-bottom:8px">English</div>
+          <div style="font-family:'Unbounded',sans-serif;font-size:13px;font-weight:900;color:var(--text);margin-bottom:10px">Hong Kong's first dedicated Barreformer studio.</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.8">Barreformer combines barre technique — the precision, the posture, the burn — with reformer resistance. The result is a full-body class that builds long, lean muscle without the bulk.</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.8;margin-top:8px">Led by Libby Liu, full-time dancer at Hong Kong Dance Company and Polestar-certified instructor.</div>
+          <div style="font-size:11px;color:var(--blush);margin-top:8px">Try intro class → HKD 200</div>
+        </div>
+        <div style="padding:14px 16px">
+          <div style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--rosy);margin-bottom:8px">繁體中文</div>
+          <div style="font-family:'Unbounded',sans-serif;font-size:13px;font-weight:900;color:var(--text);margin-bottom:10px">香港首間 Barreformer 專門室。</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.8">Barreformer 將芭蕾把杆技術 — 精準度、體態、燃燒感 — 結合彈簧床阻力。成果係一堂塑造修長肌肉線條嘅全身課。</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.8;margin-top:8px">由 Libby Liu 主理 — 香港舞蹈團全職舞蹈員，Polestar 認證導師。</div>
+          <div style="font-size:11px;color:var(--blush);margin-top:8px">體驗入門課 → HKD 200</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- §5 PRICING -->
+    <div style="background:var(--white);border:1px solid var(--border2);border-radius:10px;overflow:hidden;margin-bottom:10px">
+      <div style="background:var(--ink);padding:10px 16px;display:flex;justify-content:space-between;align-items:center">
+        <div style="font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;color:var(--sand)">§5 — Pricing</div>
+        <div style="font-size:10px;color:var(--gray)">Regular / student toggle</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0">
+        <div style="padding:14px 16px;border-right:1px solid var(--border2)">
+          <div style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--blush);margin-bottom:8px">English</div>
+          <div style="font-size:12px;color:var(--text);line-height:2">
+            Intro class — HKD 150<br>
+            5-class pack — HKD 1,600 (320/class · 3 months)<br>
+            <strong>10-class pack — HKD 2,900 (290/class · 5 months) ★</strong><br>
+            20-class pack — HKD 5,200 (260/class · 8 months)<br>
+            Monthly 8 classes — HKD 2,400<br>
+            Monthly unlimited — HKD 4,500<br>
+            <span style="color:var(--blush)">Student intro — HKD 80 · Student monthly — HKD 1,200</span>
+          </div>
+          <div style="font-size:11px;color:var(--text3);margin-top:8px">CTA: Book your first class for HKD 150 →</div>
+        </div>
+        <div style="padding:14px 16px">
+          <div style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--rosy);margin-bottom:8px">繁體中文</div>
+          <div style="font-size:12px;color:var(--text);line-height:2">
+            入門課 — HKD 150<br>
+            5堂套票 — HKD 1,600 (320/堂 · 3個月有效)<br>
+            <strong>10堂套票 — HKD 2,900 (290/堂 · 5個月有效) ★</strong><br>
+            20堂套票 — HKD 5,200 (260/堂 · 8個月有效)<br>
+            月費8堂 — HKD 2,400<br>
+            月費無限堂 — HKD 4,500<br>
+            <span style="color:var(--blush)">學生入門課 — HKD 80 · 學生月費 — HKD 1,200</span>
+          </div>
+          <div style="font-size:11px;color:var(--text3);margin-top:8px">CTA: 立即預約入門課 HKD 150 →</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- §6 INSTRUCTORS -->
+    <div style="background:var(--white);border:1px solid var(--border2);border-radius:10px;overflow:hidden;margin-bottom:10px">
+      <div style="background:var(--ink);padding:10px 16px;display:flex;justify-content:space-between;align-items:center">
+        <div style="font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;color:var(--sand)">§6 — Instructors</div>
+        <div style="font-size:10px;color:var(--gray)">3-col grid · photo + name + 1-line bio + handle</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0">
+        <div style="padding:14px 16px;border-right:1px solid var(--border2)">
+          <div style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--blush);margin-bottom:8px">English</div>
+          <div style="font-size:12px;color:var(--text);line-height:2">
+            <strong>Kylie</strong> — Founder. Gym rat. Semi-professional Chinese dancer. @kawaixx<br>
+            <strong>Loretta</strong> — Pilates instructor. Lululemon community lead. @lorlee<br>
+            <strong>Libby Liu</strong> — Barreformer lead. HK Dance Company dancer. Polestar certified. @libby033<br>
+            <strong>Sylvia</strong> — Polestar certified. Yoga + pilates. E-RYT200. @thelivingsylvie<br>
+            <strong>Clara</strong> — Ballet instructor turned pilates. Ballet Core specialist. @clarafann<br>
+            <strong>Sadie</strong> — BASI certified. Foundations specialist. @sadiestk
+          </div>
+        </div>
+        <div style="padding:14px 16px">
+          <div style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--rosy);margin-bottom:8px">繁體中文</div>
+          <div style="font-size:12px;color:var(--text);line-height:2">
+            <strong>Kylie</strong> — 創辦人。健身狂兼半職業中國舞蹈員。@kawaixx<br>
+            <strong>Loretta</strong> — 普拉提導師。Lululemon 社群領袖。@lorlee<br>
+            <strong>Libby Liu</strong> — Barreformer 主理導師。香港舞蹈團舞蹈員。Polestar 認證。@libby033<br>
+            <strong>Sylvia</strong> — Polestar 認證。瑜伽 + 普拉提。E-RYT200。@thelivingsylvie<br>
+            <strong>Clara</strong> — 芭蕾導師轉型普拉提。Ballet Core 專門導師。@clarafann<br>
+            <strong>Sadie</strong> — BASI 認證。入門課專門導師。@sadiestk
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- §7 FIND US -->
+    <div style="background:var(--white);border:1px solid var(--border2);border-radius:10px;overflow:hidden;margin-bottom:10px">
+      <div style="background:var(--ink);padding:10px 16px;display:flex;justify-content:space-between;align-items:center">
+        <div style="font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;color:var(--sand)">§7 — Find us</div>
+        <div style="font-size:10px;color:var(--gray)">Map embed + directions + hours</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0">
+        <div style="padding:14px 16px;border-right:1px solid var(--border2)">
+          <div style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--blush);margin-bottom:8px">English</div>
+          <div style="font-size:12px;color:var(--text);line-height:2">
+            <strong>Address:</strong> 9/F Full View Building, 140–142 Des Voeux Rd Central<br>
+            <strong>Entry:</strong> Via Gilman's Bazaar · take the lift to 9/F<br>
+            <strong>Nearest MTR:</strong> Sheung Wan Exit E2 (3 min walk)<br>
+            <strong>Tram:</strong> Des Voeux Rd Central stop (1 min walk)<br>
+            <strong>Hours:</strong> Mon–Fri 8am–9pm · Sat–Sun 9am–6pm<br>
+            <strong>IG:</strong> @reform.hk
+          </div>
+        </div>
+        <div style="padding:14px 16px">
+          <div style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--rosy);margin-bottom:8px">繁體中文</div>
+          <div style="font-size:12px;color:var(--text);line-height:2">
+            <strong>地址：</strong>中環德輔道中140–142號富偉商業大廈9樓<br>
+            <strong>入口：</strong>由機行文新街入，搭電梯至9樓<br>
+            <strong>最近港鐵：</strong>上環站E2出口（步行約3分鐘）<br>
+            <strong>電車：</strong>德輔道中站（步行約1分鐘）<br>
+            <strong>開放時間：</strong>星期一至五 上午8時–晚上9時 · 星期六日 上午9時–下午6時<br>
+            <strong>IG：</strong>@reform.hk
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SQUARESPACE CUSTOM CSS -->
     <div class="sec">
-      <div class="sl">Single-page scroll layout</div>
-      <div class="callout ink"><div class="callout-body">Platform: Squarespace (Mindbody/Hapana booking embed, easier to self-manage) or Framer (more design control). Mobile-first. Bilingual EN/TC toggle. Sticky "Book Now" in mobile footer bar.</div></div>
-      <div style="background:var(--sand);border-radius:10px;padding:1.5rem;display:flex;flex-direction:column;gap:8px">
-        <div class="wire-dark">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem;flex-wrap:wrap;gap:8px">
-            <span style="font-family:'Unbounded',sans-serif;font-weight:900;font-size:13px;color:var(--sand);letter-spacing:.06em">REFORM.</span>
-            <div style="display:flex;gap:14px;font-size:11px;color:var(--gray);flex-wrap:wrap">
-              <span>Classes</span><span>Book</span><span>Pricing</span><span>About</span><span>Student</span><span style="color:var(--blush)">Book Now →</span>
-            </div>
-          </div>
-          <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:1.25rem;text-align:center">
-            <div style="font-family:'Unbounded',sans-serif;font-weight:900;font-size:20px;color:var(--sand);line-height:1.15;margin-bottom:8px">REFORMER.<br><span style="color:var(--blush)">BARREFORMER.</span><br>CENTRAL HK.</div>
-            <div style="font-size:11px;color:var(--gray);margin-bottom:12px">9/F Full View Building · Entry via Gilman's Bazaar · Max 6 per class</div>
-            <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
-              <span style="background:var(--blush);color:#fff;font-size:11px;padding:6px 16px;border-radius:20px;font-weight:500">Book intro — HKD 150</span>
-              <span style="border:1px solid rgba(255,255,255,0.2);color:var(--gray);font-size:11px;padding:6px 16px;border-radius:20px">Student offer →</span>
-            </div>
-          </div>
-        </div>
-        <div style="font-size:10px;color:var(--text3);text-align:center">§1 Hero · full dark · Unbounded headline · 2 CTAs</div>
-        <div class="wire-section"><div class="wire-label">§2 — What is Reform. · founder statement · 2–3 lines · studio photo alongside</div></div>
-        <div class="wire-section"><div class="wire-label">§3 — Classes card grid · Reformer · Barreformer · Ballet Core · Jumpboard · each with level pill + Book →</div></div>
-        <div class="wire-dark" style="padding:1rem 1.25rem"><div style="font-size:10px;color:var(--gray);margin-bottom:4px;text-transform:uppercase;letter-spacing:.1em">§4 — Barreformer spotlight · full dark</div><div style="font-family:'Unbounded',sans-serif;font-size:12px;color:var(--sand);font-weight:700">"Hong Kong's first dedicated Barreformer studio."</div><div style="font-size:11px;color:var(--gray);margin-top:3px">Video embed + "Try intro class →"</div></div>
-        <div class="wire-section"><div class="wire-label">§5 — Pricing table · toggle: Regular / Student · CTA "Book your first class for HKD 150"</div></div>
-        <div class="wire-section"><div class="wire-label">§6 — Instructors · 3-col grid · photo + name + 1-line bio + IG handle</div></div>
-        <div class="wire-section"><div class="wire-label">§7 — Find us · Google Maps embed · EN + TC address · "Take Gilman's Bazaar · lift to 9/F" · opening hours</div></div>
-        <div class="wire-dark" style="padding:.75rem 1.25rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
-          <span style="font-family:'Unbounded',sans-serif;font-size:11px;font-weight:700;color:var(--sand)">REFORM.</span>
-          <div style="display:flex;gap:12px;font-size:11px;color:var(--gray)"><span>@reform.hk</span><span>Central HK</span><span style="color:var(--blush)">Book →</span></div>
-        </div>
-        <div style="font-size:10px;color:var(--text3);text-align:center">Footer</div>
+      <div class="sl">Squarespace custom CSS — paste into Design → Custom CSS</div>
+      <div style="background:#1a1a1a;border-radius:10px;padding:1.25rem;overflow-x:auto">
+        <pre style="font-family:monospace;font-size:11px;color:#d6d2ca;line-height:1.8;white-space:pre">/* REFORM. — Squarespace Custom CSS */
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=DM+Sans:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap');
+
+:root {
+  --reform-ink: #1a1a1a;
+  --reform-sand: #f0ede8;
+  --reform-blush: #c7999b;
+  --reform-gray: #9a9590;
+}
+
+/* Headings → Unbounded */
+h1, h2, h3, .sqsrte-large {
+  font-family: 'Unbounded', sans-serif !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.01em !important;
+}
+
+/* Body → DM Sans */
+body, p, li, td {
+  font-family: 'DM Sans', sans-serif !important;
+}
+
+/* Blockquotes → DM Serif Display italic */
+blockquote {
+  font-family: 'DM Serif Display', serif !important;
+  font-style: italic !important;
+  font-size: 1.4em !important;
+}
+
+/* Buttons */
+.sqs-block-button-element {
+  background: var(--reform-blush) !important;
+  border-color: var(--reform-blush) !important;
+  font-family: 'Unbounded', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 11px !important;
+  letter-spacing: .1em !important;
+  text-transform: uppercase !important;
+  border-radius: 3px !important;
+}
+
+/* Dark section background */
+.dark-section { background: var(--reform-ink) !important; color: var(--reform-sand) !important; }
+
+/* Nav */
+.header-nav-item a {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 13px !important;
+  letter-spacing: .04em !important;
+}</pre>
       </div>
     </div>
   </div>
+</div>
 
   <!-- TASKS -->
   <div id="section-tasks" class="section">
@@ -1859,20 +2145,6 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f2ee; color: #1a1a1a; 
 </div>
 
 <!-- TEASER SECTION -->
-    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:1rem">
-      <button onclick="teaserDownloadAll()" style="background:#c7999b;color:#fff;border:none;padding:9px 20px;font-family:'Unbounded',sans-serif;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;cursor:pointer">Download all 9</button>
-      <button onclick="teaserDownloadGrid()" style="background:transparent;border:1px solid var(--border);color:var(--text2);padding:9px 20px;font-family:'Unbounded',sans-serif;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;cursor:pointer">Download as grid</button>
-    </div>
-    <div style="font-size:10px;color:var(--text3);margin-bottom:1rem;letter-spacing:.08em;text-transform:uppercase">Hover to preview · click tile to save · 1080×1350px</div>
-    <div id="teaser-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:3px;width:100%;max-width:600px;"></div>
-  </div>
-  <div class="sec">
-    <div class="sl">Captions — click to copy</div>
-    <div id="teaser-captions"></div>
-  </div>
-</div>
-
-<!-- TEASER SECTION -->
 <div id="section-teaser" class="section" style="min-width:0;">
   <div class="sec">
     <div class="sl">Teaser grid — 9 tiles · 4:5 · click to download</div>
@@ -2238,81 +2510,221 @@ function teaserDownloadGrid(){
   <button class="mob-sheet-item" onclick="sheetNav('june')">June</button>
   <button class="mob-sheet-item" onclick="sheetNav('weekly')">Weekly plan</button>
   <button class="mob-sheet-item" onclick="sheetNav('mockup')">IG mockup</button>
-</div>
 
-<script>
-function openSheet(name) {
-  closeSheet();
-  document.getElementById('mob-overlay').classList.add('open');
-  document.getElementById('sheet-' + name).classList.add('open');
-}
-function closeSheet() {
-  document.getElementById('mob-overlay').classList.remove('open');
-  document.querySelectorAll('.mob-sheet').forEach(function(s) { s.classList.remove('open'); });
-}
-function sheetNav(id) {
-  closeSheet();
-  navigateTo(id);
-  setMobActive('mob-studio');
-}
-function setMobActive(id) {
-  document.querySelectorAll('.mob-btn').forEach(function(b) { b.classList.remove('active'); });
-  var el = document.getElementById(id);
-  if (el) el.classList.add('active');
-}
-</script>
-
-
-<button onclick="document.getElementById('rnav').style.display='flex'" style="position:fixed;bottom:20px;right:20px;width:52px;height:52px;background:#1a1a1a;border:none;border-radius:50%;color:#c7999b;font-size:22px;cursor:pointer;z-index:9999;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,0.3)">☰</button>
-
-<div id="rnav" style="display:none;position:fixed;inset:0;z-index:99999;flex-direction:column;justify-content:flex-end;">
-  <div onclick="document.getElementById('rnav').style.display='none'" style="position:absolute;inset:0;background:rgba(0,0,0,0.5)"></div>
-  <div style="position:relative;background:#1a1a1a;border-radius:20px 20px 0 0;padding:20px 0 40px;max-height:80vh;overflow-y:auto;-webkit-overflow-scrolling:touch">
-    <div style="display:flex;justify-content:space-between;align-items:center;padding:0 20px 16px;border-bottom:1px solid rgba(255,255,255,0.08)">
-      <span style="font-family:Unbounded,sans-serif;font-weight:900;font-size:14px;color:#f0ede8;letter-spacing:.04em">REFORM<span style="color:#c7999b">.</span></span>
-      <button onclick="document.getElementById('rnav').style.display='none'" style="background:none;border:none;color:#9a9590;font-size:20px;cursor:pointer">✕</button>
+<div id="section-print" class="section">
+  <div class="sec">
+    <div class="sl">A2 street posters — rendered in browser · screenshot or print to save</div>
+    <div style="background:var(--sand);border-radius:10px;padding:1rem 1.25rem;margin-bottom:1rem;border-left:3px solid var(--ink);font-size:12px;color:var(--text2);line-height:1.6">
+      Each poster below is A2 proportions. To save: right-click → Save image as, or use your browser's screenshot tool. For print-quality files, open <strong>reform_posters.html</strong> in Chrome.
     </div>
-    <div style="padding:8px 0">
-      <div style="font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.25);padding:14px 20px 6px">Studio Plan</div>
-      <div onclick="go('overview')" class="ni">Overview</div>
-      <div onclick="go('space')" class="ni">Space</div>
-      <div onclick="go('instructors')" class="ni">Instructors</div>
-      <div onclick="go('programmes')" class="ni">Programmes</div>
-      <div onclick="go('schedule')" class="ni">Schedule</div>
-      <div onclick="go('pricing')" class="ni">Pricing</div>
-      <div onclick="go('content')" class="ni">Content</div>
-      <div onclick="go('branding')" class="ni">Branding</div>
-      <div onclick="go('competitors')" class="ni">Competitors</div>
-      <div onclick="go('partners')" class="ni">Partners</div>
-      <div onclick="go('website')" class="ni">Website</div>
-      <div onclick="go('tasks')" class="ni">Tasks</div>
-      <div style="font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.25);padding:14px 20px 6px">Content Calendar</div>
-      <div onclick="go('cal-overview')" class="ni">Overview</div>
-      <div onclick="go('pillars')" class="ni">Pillars</div>
-      <div onclick="go('march')" class="ni">March</div>
-      <div onclick="go('april')" class="ni">April</div>
-      <div onclick="go('may')" class="ni">May</div>
-      <div onclick="go('june')" class="ni">June</div>
-      <div onclick="go('weekly')" class="ni">Weekly</div>
-      <div onclick="go('mockup')" class="ni">IG mockup</div>
-      <div style="font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.25);padding:14px 20px 6px">Creative</div>
-      <div onclick="go('teaser')" class="ni">Teaser grid</div>
-      <div style="font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.25);padding:14px 20px 6px">Private</div>
-      <div onclick="go('pl')" class="ni">P&amp;L 🔒</div>
+  </div>
+
+  <div class="sec">
+    <div class="sl">A2 posters — 420 × 594mm ratio</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:2rem">
+
+      <!-- 01 coming soon -->
+      <div style="aspect-ratio:420/594;background:#1a1a1a;padding:5%;display:flex;flex-direction:column;justify-content:flex-end;border-radius:4px;overflow:hidden;position:relative">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:#c7999b"></div>
+        <div style="font-family:'Unbounded',sans-serif;font-weight:900;font-size:clamp(10px,4.5vw,36px);color:#f0ede8;line-height:.9;margin-bottom:8%">RE<br>FO<br>RM<span style="color:#c7999b">.</span></div>
+        <div style="font-size:clamp(7px,1vw,10px);color:#9a9590;letter-spacing:.1em;margin-bottom:2%">COMING SOON · REFORMER · BARREFORMER</div>
+        <div style="font-size:clamp(7px,1vw,10px);color:#9a9590;letter-spacing:.06em;margin-bottom:1%">TRAM ROAD · CENTRAL HK</div>
+        <div style="font-size:clamp(7px,1vw,9px);color:#c7999b">@reform.hk</div>
+        <div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:#c7999b"></div>
+      </div>
+
+      <!-- 02 did you shake -->
+      <div style="aspect-ratio:420/594;background:#f0ede8;padding:5%;display:flex;flex-direction:column;justify-content:space-between;border-radius:4px;overflow:hidden">
+        <div style="font-family:'Unbounded',sans-serif;font-weight:900;font-size:clamp(7px,1vw,9px);color:#1a1a1a;letter-spacing:.08em">REFORM<span style="color:#c7999b">.</span></div>
+        <div>
+          <div style="font-family:'DM Serif Display',serif;font-style:italic;font-size:clamp(14px,5vw,42px);color:#1a1a1a;line-height:1">did<br>you<br>shake?</div>
+          <div style="font-size:clamp(7px,1vw,9px);color:#5a5855;margin-top:5%;line-height:1.8">your muscles shook. that means it worked.</div>
+          <div style="font-size:clamp(7px,1vw,9px);color:#c7999b;margin-top:2%">@reform.hk · tram road, central</div>
+        </div>
+      </div>
+
+      <!-- 03 hundreds club -->
+      <div style="aspect-ratio:420/594;background:#c7999b;padding:5%;display:flex;flex-direction:column;justify-content:space-between;border-radius:4px;overflow:hidden">
+        <div style="font-family:'Unbounded',sans-serif;font-weight:900;font-size:clamp(7px,1vw,9px);color:rgba(255,255,255,0.4)">REFORM.</div>
+        <div>
+          <div style="font-family:'Unbounded',sans-serif;font-weight:900;font-size:clamp(14px,4.5vw,36px);color:#fff;line-height:.95">HUN<br>DREDS<br>CLUB.</div>
+          <div style="width:30px;height:2px;background:rgba(255,255,255,0.3);margin:5% 0"></div>
+          <div style="font-size:clamp(7px,1vw,9px);color:rgba(255,255,255,0.7);line-height:1.8">REFORMER PILATES · TRAM ROAD · CENTRAL HK</div>
+          <div style="font-size:clamp(7px,1vw,9px);color:rgba(255,255,255,0.5);margin-top:2%">if you know, you know. · @reform.hk</div>
+        </div>
+      </div>
+
+      <!-- 04 not a chain -->
+      <div style="aspect-ratio:420/594;background:#1a1a1a;padding:5%;display:flex;flex-direction:column;justify-content:space-between;border-radius:4px;overflow:hidden;position:relative">
+        <div style="position:absolute;top:0;left:0;right:0;height:4px;background:#c7999b"></div>
+        <div style="font-size:clamp(7px,1vw,9px);color:#9a9590;letter-spacing:.1em;padding-top:3%">BOUTIQUE PILATES · CENTRAL HK</div>
+        <div>
+          <div style="font-family:'Unbounded',sans-serif;font-weight:900;font-size:clamp(12px,3.5vw,28px);color:#f0ede8;line-height:1.1">not a<br><span style="color:#c7999b">chain.</span></div>
+          <div style="font-family:'Unbounded',sans-serif;font-weight:900;font-size:clamp(10px,2.5vw,20px);color:#f0ede8;line-height:1.2;margin-top:4%">max 6<br>per class.</div>
+          <div style="width:30px;height:1px;background:#333;margin:4% 0"></div>
+          <div style="font-size:clamp(7px,1vw,9px);color:#9a9590;line-height:1.8">reformer · barreformer · physio</div>
+          <div style="font-size:clamp(7px,1vw,9px);color:#c7999b;margin-top:2%">@reform.hk · tram road, central</div>
+        </div>
+        <div style="position:absolute;bottom:0;left:0;right:0;height:4px;background:#c7999b"></div>
+      </div>
+
+      <!-- 05 reset reform repeat -->
+      <div style="aspect-ratio:420/594;border-radius:4px;overflow:hidden;display:flex;flex-direction:column">
+        <div style="flex:1;background:#1a1a1a;display:flex;align-items:center;justify-content:center">
+          <div style="font-family:'Unbounded',sans-serif;font-weight:900;font-size:clamp(10px,3vw,24px);color:#f0ede8">reset.</div>
+        </div>
+        <div style="flex:1;background:#c7999b;display:flex;align-items:center;justify-content:center">
+          <div style="font-family:'Unbounded',sans-serif;font-weight:900;font-size:clamp(10px,3vw,24px);color:#fff">reform.</div>
+        </div>
+        <div style="flex:1;background:#f0ede8;display:flex;align-items:center;justify-content:center">
+          <div style="font-family:'Unbounded',sans-serif;font-weight:900;font-size:clamp(10px,3vw,24px);color:#1a1a1a">repeat.</div>
+        </div>
+        <div style="background:#1a1a1a;padding:2% 4%;text-align:center">
+          <div style="font-size:clamp(6px,1vw,8px);color:#9a9590;letter-spacing:.08em">REFORM. · @reform.hk · TRAM ROAD · CENTRAL HK</div>
+        </div>
+      </div>
+
+      <!-- 06 ballet core -->
+      <div style="aspect-ratio:420/594;background:#f0ede8;padding:5%;display:flex;flex-direction:column;justify-content:space-between;border-radius:4px;overflow:hidden">
+        <div style="font-family:'Unbounded',sans-serif;font-weight:900;font-size:clamp(7px,1vw,9px);color:#1a1a1a">REFORM<span style="color:#c7999b">.</span></div>
+        <div>
+          <div style="font-family:'DM Serif Display',serif;font-style:italic;font-size:clamp(14px,5vw,40px);color:#1a1a1a;line-height:1">ballet<br>core<br>vibes.</div>
+          <div style="width:30px;height:3px;background:#c7999b;margin:5% 0"></div>
+          <div style="font-size:clamp(7px,1vw,9px);color:#5a5855;line-height:1.8">barre. reformer. one class.<br>your posture will never be the same.</div>
+          <div style="font-size:clamp(7px,1vw,9px);color:#c7999b;margin-top:2%">@reform.hk · tram road, central</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sl">Sticker pack — 8 designs</div>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;margin-bottom:1.5rem">
+
+      <!-- 1 REFORM circle -->
+      <div style="display:flex;flex-direction:column;align-items:center;gap:5px">
+        <div style="width:90px;height:90px;border-radius:50%;background:#1a1a1a;display:flex;flex-direction:column;align-items:center;justify-content:center">
+          <div style="font-family:'Unbounded',sans-serif;font-weight:900;font-size:13px;line-height:1"><span style="color:#f0ede8">REFORM</span><span style="color:#c7999b">.</span></div>
+          <div style="font-size:7px;color:#9a9590;margin-top:3px">@reform.hk</div>
+        </div>
+        <div style="font-size:9px;color:#9a9590;text-align:center">REFORM.</div>
+      </div>
+
+      <!-- 2 did you shake -->
+      <div style="display:flex;flex-direction:column;align-items:center;gap:5px">
+        <div style="width:90px;height:90px;border-radius:50%;background:#c7999b;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:8px">
+          <div style="font-family:'Unbounded',sans-serif;font-weight:900;font-size:9px;color:#fff;line-height:1.3">did you<br>shake?</div>
+          <div style="font-size:6px;color:rgba(255,255,255,0.6);margin-top:3px">@reform.hk</div>
+        </div>
+        <div style="font-size:9px;color:#9a9590;text-align:center">did you shake</div>
+      </div>
+
+      <!-- 3 hundreds club -->
+      <div style="display:flex;flex-direction:column;align-items:center;gap:5px">
+        <div style="width:90px;height:90px;border-radius:50%;background:#f0ede8;border:2px solid #1a1a1a;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:8px">
+          <div style="font-family:'Unbounded',sans-serif;font-weight:900;font-size:8px;color:#1a1a1a;line-height:1.3">HUNDREDS<br>CLUB.</div>
+          <div style="font-size:6px;color:#c7999b;margin-top:3px">@reform.hk</div>
+        </div>
+        <div style="font-size:9px;color:#9a9590;text-align:center">hundreds club</div>
+      </div>
+
+      <!-- 4 logo -->
+      <div style="display:flex;flex-direction:column;align-items:center;gap:5px">
+        <div style="width:90px;height:90px;border-radius:50%;background:#9a9590;display:flex;align-items:center;justify-content:center">
+          <svg viewBox="0 0 456 737" width="44" height="44"><path d="M206.23 326.936C161.881 330.709 118.706 355.41 90.084 389.402L90.085 389.403C59.0238 426.322 43.7677 473.963 47.5566 522L47.752 524.288V524.294C51.6686 567.852 71.0532 608.564 102.393 639.063C134.586 668.887 163.666 682.592 206.114 688.888L206.168 363.412V363.407C206.18 354.548 206.705 336.732 206.24 326.935L206.23 326.936ZM248.716 326.654C248.296 348.457 248.657 370.89 248.634 392.829L248.596 531.79L248.752 633.598V633.602C248.761 650.716 248.265 671.528 248.864 688.761C291.335 682.729 324.313 667.483 355.494 636.746C378.791 611.848 394.611 586.021 402.75 552.881C429.214 445.068 358.722 340.921 248.716 326.654ZM248.607 203.401V203.404C248.599 228.758 247.853 258.503 248.618 283.608C262.752 285.183 275.414 287.126 289.655 291.105L289.688 291.115C331.796 303.273 369.286 327.742 397.364 361.355L398.694 362.964L398.711 362.983C400.563 365.274 407.469 374.862 408.312 376.02C408.637 345.212 408.236 313.432 408.227 282.684V282.682L408.237 240.056C408.237 230.368 407.703 210.928C404.511 170.522 387.455 132.477 359.42 103.229C334.007 76.9503 303.618 58.9786 267.933 50.9014C262.907 49.7651 248.543 47.6172L248.607 203.401ZM206.198 47.8828C164.383 50.9523 122.173 74.296 93.958 105.045C68.0864 133.331 51.9311 169.147 47.8486 207.266C46.9075 216.619 46.8379 235.259L46.8809 244.807L47.0547 355.644C51.6901 369.119 62.4014 356.17C95.3588 318.679 140.335 293.828 189.611 285.883C195.121 285.028 206.277 283.789L206.198 47.8828ZM451.001 459.516C443.372 567.212C433.746 602.742 415.973 634.341 391.176 661.35C351.295 704.89 295.571 730.546 236.564 732.529C175.951 734.273 121.654 715.287 76.7549 673.877C32.5542 633.334 6.4802 576.74 4.38477 516.794L4.2793 359.739L4.24023 270.489C10.6572 173.369C19.5493 136.534 63.6045 74.8906C103.327 31.7033 158.709 6.25835 217.346 4.25293C277.534 1.62324 333.286 20.7929 377.772 61.4404C421.831 100.984 450.588 215.784L451.001 459.515Z" fill="white"/></svg>
+        </div>
+        <div style="font-size:9px;color:#9a9590;text-align:center">logo mark</div>
+      </div>
+
+      <!-- 5 reset reform -->
+      <div style="display:flex;flex-direction:column;align-items:center;gap:5px">
+        <div style="width:90px;height:90px;border-radius:50%;background:#1a1a1a;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center">
+          <div style="font-family:'Unbounded',sans-serif;font-weight:900;font-size:9px;color:#f0ede8;line-height:1.5">reset.<br><span style="color:#c7999b">reform.</span></div>
+          <div style="font-size:6px;color:#9a9590;margin-top:3px">@reform.hk</div>
+        </div>
+        <div style="font-size:9px;color:#9a9590;text-align:center">reset reform</div>
+      </div>
+
+      <!-- 6 ballet core -->
+      <div style="display:flex;flex-direction:column;align-items:center;gap:5px">
+        <div style="width:90px;height:90px;border-radius:50%;background:#f0ede8;border:2px solid #1a1a1a;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:8px">
+          <div style="font-family:'DM Serif Display',serif;font-style:italic;font-size:10px;color:#1a1a1a;line-height:1.3">ballet core<br>vibes.</div>
+          <div style="font-size:6px;color:#c7999b;margin-top:3px">@reform.hk</div>
+        </div>
+        <div style="font-size:9px;color:#9a9590;text-align:center">ballet core</div>
+      </div>
+
+      <!-- 7 tram road -->
+      <div style="display:flex;flex-direction:column;align-items:center;gap:5px">
+        <div style="width:90px;height:90px;border-radius:50%;background:#c7999b;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center">
+          <div style="font-family:'Unbounded',sans-serif;font-weight:900;font-size:9px;color:#fff;line-height:1.4">TRAM<br>ROAD.</div>
+          <div style="font-size:6px;color:rgba(255,255,255,0.65);margin-top:2px">CENTRAL HK</div>
+          <div style="font-size:6px;color:rgba(255,255,255,0.45);margin-top:1px">@reform.hk</div>
+        </div>
+        <div style="font-size:9px;color:#9a9590;text-align:center">tram road</div>
+      </div>
+
+      <!-- 8 max 6 -->
+      <div style="display:flex;flex-direction:column;align-items:center;gap:5px">
+        <div style="width:90px;height:90px;border-radius:50%;background:#1a1a1a;border:3px solid #c7999b;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center">
+          <div style="font-family:'Unbounded',sans-serif;font-weight:900;font-size:24px;color:#c7999b;line-height:1">6</div>
+          <div style="font-size:7px;color:#9a9590;margin-top:2px">max per class</div>
+          <div style="font-size:6px;color:rgba(199,153,155,0.5);margin-top:1px">@reform.hk</div>
+        </div>
+        <div style="font-size:9px;color:#9a9590;text-align:center">max 6</div>
+      </div>
+
+    </div>
+    <div style="font-size:11px;color:var(--text3);line-height:1.7">For print-quality PNG downloads of all posters and stickers, open <strong>reform_posters.html</strong> in Chrome — all 6 posters at A2 resolution (2480×3508px) with save buttons.</div>
+  </div>
+
+  <div class="sec">
+    <div class="sl">Lift stickers placement</div>
+    <div style="background:var(--white);border:1px solid var(--border2);border-radius:10px;padding:1.25rem;margin-bottom:1rem">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px">
+        <div><div style="font-weight:500;font-size:12px;margin-bottom:3px">Door panel</div><div style="font-size:11px;color:var(--text2)">"did you shake?" + "hundreds club." as sticker strip</div></div>
+        <div><div style="font-weight:500;font-size:12px;margin-bottom:3px">Lift mirror</div><div style="font-size:11px;color:var(--text2)">"reset. reform. repeat." vinyl decal</div></div>
+        <div><div style="font-weight:500;font-size:12px;margin-bottom:3px">Button panel</div><div style="font-size:11px;color:var(--text2)">"hundreds club." next to G button</div></div>
+        <div><div style="font-weight:500;font-size:12px;margin-bottom:3px">Floor</div><div style="font-size:11px;color:var(--text2)">Pelvic floor tent card — face-up</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sl">Print specs + where to print HK</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px">
+      <div style="background:var(--white);border:1px solid var(--border2);border-radius:8px;padding:.875rem 1rem"><div style="font-weight:500;font-size:12px;margin-bottom:3px">Posters</div><div style="font-size:11px;color:var(--text2)">A2 · 420×594mm · 170gsm matte</div></div>
+      <div style="background:var(--white);border:1px solid var(--border2);border-radius:8px;padding:.875rem 1rem"><div style="font-weight:500;font-size:12px;margin-bottom:3px">Stickers</div><div style="font-size:11px;color:var(--text2)">5cm + 10cm circles · vinyl · waterproof</div></div>
+      <div style="background:var(--white);border:1px solid var(--border2);border-radius:8px;padding:.875rem 1rem"><div style="font-weight:500;font-size:12px;margin-bottom:3px">Where to print HK</div><div style="font-size:11px;color:var(--text2)">Printop · 688 Print · Wan Chai / Mong Kok</div></div>
+      <div style="background:var(--white);border:1px solid var(--border2);border-radius:8px;padding:.875rem 1rem"><div style="font-weight:500;font-size:12px;margin-bottom:3px">Best spots Central</div><div style="font-size:11px;color:var(--text2)">Tram stops · IFC underpass · Escalator · Gilman's Bazaar</div></div>
     </div>
   </div>
 </div>
 
-<style>
-.ni { padding:13px 20px;color:#9a9590;font-size:15px;font-family:'DM Sans',sans-serif;cursor:pointer;border-bottom:1px solid rgba(255,255,255,0.04); }
-.ni:active { background:rgba(255,255,255,0.06);color:#f0ede8; }
-</style>
-
-
-
-
 
 <script>
+
+var _fontsReady = null;
+function waitFonts() {
+  if (_fontsReady) return _fontsReady;
+  _fontsReady = new Promise(function(resolve) {
+    if (!document.fonts || !document.fonts.ready) { setTimeout(resolve, 500); return; }
+    document.fonts.ready.then(function() {
+      Promise.all([
+        document.fonts.load('900 60px Unbounded'),
+        document.fonts.load('italic 60px "DM Serif Display"'),
+        document.fonts.load('400 60px "DM Sans"')
+      ]).then(function() {
+        setTimeout(resolve, 200);
+      }).catch(function() {
+        setTimeout(resolve, 800);
+      });
+    });
+  });
+  return _fontsReady;
+}
+
 var plUnlocked = false;
 
 function openNav() {
@@ -2328,13 +2740,15 @@ function go(id) {
     setTimeout(function() { document.getElementById('pl-pw').focus(); }, 100);
     return;
   }
-  document.querySelectorAll('.section').forEach(function(s) { s.classList.remove('active'); });
-  document.querySelectorAll('.nav-link').forEach(function(l) { l.classList.remove('active'); });
+  document.querySelectorAll('.nav-link').forEach(function(l) {
+    l.classList.remove('active');
+    var oc = l.getAttribute('onclick') || '';
+    if (oc.indexOf("go('" + id + "')") !== -1) l.classList.add('active');
+  });
   var target = document.getElementById('section-' + id);
-  if (target) target.classList.add('active');
-  document.querySelectorAll('.nav-link[onclick="go(\''+id+'\')"]').forEach(function(l) { l.classList.add('active'); });
-  if (id === 'teaser') document.fonts.load('900 40px Unbounded').then(buildTeaser);
-  window.scrollTo(0, 0);
+  if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  if (id === 'teaser') waitFonts().then(buildTeaser);
+  if (id === 'print') waitFonts().then(function(){ buildPrint(); });
 }
 function checkPL() {
   if (document.getElementById('pl-pw').value === 'reform2026') {
@@ -2357,8 +2771,14 @@ function toggleTask(el) {
 document.getElementById('pl-overlay').addEventListener('click', function(e) {
   if (e.target === this) this.classList.remove('visible');
 });
-go('overview');
+// sections always visible, nav scrolls to them
 </script>
 
+
+<script>
+function buildPrint(){}
+function dlAllPosters(){ alert('open reform_posters.html in Chrome to download'); }
+function dlAllStickers(){ alert('open reform_posters.html in Chrome to download'); }
+</script>
 </body>
 </html>
