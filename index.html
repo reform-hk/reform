@@ -6,6 +6,8 @@
 <title>REFORM. — Studio Plan</title>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=DM+Sans:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 <style>
+
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: 'DM Sans', sans-serif; background: #f5f2ee; color: #1a1a1a; padding-bottom: 80px; }
 
@@ -699,16 +701,19 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f2ee; color: #1a1a1a; 
   margin-top: 1.5rem;
 }
 .section:first-child { border-top: none; }
+
+body { font-family: 'DM Sans', sans-serif; background: #f5f2ee; color: #1a1a1a; padding: 2rem 1.25rem 4rem; }
+.page { max-width: 860px; margin: 0 auto; }
+.page-header { margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(0,0,0,0.08); }
+.page-eyebrow { font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: #9a9590; margin-bottom: .5rem; }
+.page-title { font-family: 'Unbounded', sans-serif; font-weight: 900; font-size: 28px; color: #1a1a1a; line-height: 1; }
+.page-title span { color: #c7999b; }
+.private-badge { display: inline-block; background: #1a1a1a; color: #c7999b; font-family: 'Unbounded', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: .12em; padding: 4px 10px; border-radius: 2px; margin-top: 10px; }
+
 </style>
 </head>
 <body>
 
-<div id="pl-overlay">
-  <div class="lock-title">REFORM<span>.</span></div>
-  <div style="font-size:10px;color:#9a9590;letter-spacing:.14em;text-transform:uppercase;font-family:'DM Sans',sans-serif">Private — P&amp;L</div>
-  <input id="pl-pw" type="password" placeholder="Password" onkeydown="if(event.key==='Enter')checkPL()">
-  <button class="lock-btn" onclick="checkPL()">Unlock</button>
-  <div id="pl-err" style="display:none;font-size:11px;color:#e05a5a;font-family:'DM Sans',sans-serif">Incorrect password.</div>
 </div>
 
 <button id="nav-fab" onclick="openNav()">☰</button>
@@ -745,8 +750,6 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f2ee; color: #1a1a1a; 
     <div class="nav-group-title">Creative</div>
     <div class="nav-link" onclick="go('teaser')">Teaser Grid</div>
     <div class="nav-link" onclick="go('print')">Posters &amp; Stickers</div>
-    <div class="nav-group-title">Private</div>
-    <div class="nav-link" onclick="go('pl')">P&amp;L 🔒</div>
   </div>
 </div>
 
@@ -782,7 +785,7 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f2ee; color: #1a1a1a; 
       <div class="sl">Positioning</div>
       <div class="callout">
         <div class="callout-title">Brand premise</div>
-        <div class="callout-body">Premium boutique pilates in the heart of Central. Founder-led, community-first. The studio that introduced Barreformer to Hong Kong. Physio on site. Not intimidating — welcoming to first-timers, serious enough for athletes.</div>
+        <div class="callout-body">Premium boutique pilates in the heart of Central. Founder-led, dancer-built. Most of our instructors are or have been professional dancers — which means the way we move, cue, and programme is different. You're not just getting fit. You're training your body to move like a dancer. The studio that introduced Barreformer to Hong Kong. Not intimidating — welcoming to first-timers, serious enough for athletes.</div>
       </div>
       <div class="callout ink">
         <div class="callout-title">Tagline candidate</div>
@@ -791,14 +794,42 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f2ee; color: #1a1a1a; 
     </div>
     <div class="sec">
       <div class="sl">Brand palette</div>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
-        <div style="background:#1a1a1a;width:44px;height:44px;border-radius:6px"></div>
-        <div style="background:#9a9590;width:44px;height:44px;border-radius:6px"></div>
-        <div style="background:#d6d2ca;width:44px;height:44px;border-radius:6px"></div>
-        <div style="background:#f0ede8;width:44px;height:44px;border-radius:6px;border:1px solid var(--border)"></div>
-        <div style="background:#c7999b;width:44px;height:44px;border-radius:6px"></div>
-        <div style="background:#f5eeec;width:44px;height:44px;border-radius:6px;border:1px solid #c7999b"></div>
-        <span style="font-size:12px;color:var(--text2);padding:0 8px;line-height:1.5">Gray-dominant · blush accent<br>Unbounded Black type</span>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:flex-start">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:4px">
+          <div style="background:#1a1a1a;width:52px;height:52px;border-radius:6px"></div>
+          <div style="font-size:9px;color:var(--text3);font-family:monospace">#1a1a1a</div>
+          <div style="font-size:9px;color:var(--text3)">Ink</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:4px">
+          <div style="background:#9a9590;width:52px;height:52px;border-radius:6px"></div>
+          <div style="font-size:9px;color:var(--text3);font-family:monospace">#9a9590</div>
+          <div style="font-size:9px;color:var(--text3)">Gray</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:4px">
+          <div style="background:#d6d2ca;width:52px;height:52px;border-radius:6px"></div>
+          <div style="font-size:9px;color:var(--text3);font-family:monospace">#d6d2ca</div>
+          <div style="font-size:9px;color:var(--text3)">Warm gray</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:4px">
+          <div style="background:#f0ede8;width:52px;height:52px;border-radius:6px;border:1px solid var(--border)"></div>
+          <div style="font-size:9px;color:var(--text3);font-family:monospace">#f0ede8</div>
+          <div style="font-size:9px;color:var(--text3)">Sand</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:4px">
+          <div style="background:#c7999b;width:52px;height:52px;border-radius:6px"></div>
+          <div style="font-size:9px;color:var(--text3);font-family:monospace">#c7999b</div>
+          <div style="font-size:9px;color:var(--text3)">Blush ★</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:4px">
+          <div style="background:#9c8489;width:52px;height:52px;border-radius:6px"></div>
+          <div style="font-size:9px;color:var(--text3);font-family:monospace">#9c8489</div>
+          <div style="font-size:9px;color:var(--text3)">Rosy slate</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:4px">
+          <div style="background:#f5eeec;width:52px;height:52px;border-radius:6px;border:1px solid #c7999b"></div>
+          <div style="font-size:9px;color:var(--text3);font-family:monospace">#f5eeec</div>
+          <div style="font-size:9px;color:var(--text3)">Blush tint</div>
+        </div>
       </div>
     </div>
     <div class="sec">
@@ -897,34 +928,44 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f2ee; color: #1a1a1a; 
   <!-- INSTRUCTORS -->
   <div id="section-instructors" class="section">
     <div class="sec">
-      <div class="sl">Instructor team — 7 instructors + 1 mentor</div>
+      <div class="sl">Instructor team</div>
       <div class="inst-card" style="border-left:3px solid var(--blush)">
         <div class="avatar" style="background:#f5eeec;color:#6b4a44">K</div>
-        <div><div class="inst-name">Kylie — Founder</div><div class="inst-handle">@kawaixx · @reform.hk · 17K</div><div class="inst-tags"><span class="pill pi">Founder</span><span class="pill pg">Chinese dance semi-pro</span><span class="pill ps">Absolute Fitness Samui</span></div><div class="inst-bio">Gym rat, pilates OG. Semi-professional Chinese dancer. Trained at Absolute Fitness, Samui. 1–2 classes/week + privates. Content face of @reform.hk. Considering Polestar or BASI.</div></div>
+        <div><div class="inst-name">Kylie — Founder</div><div class="inst-handle">@kawaixx · @reform.hk · 17K</div><div class="inst-tags"><span class="pill pi">Founder</span><span class="pill pg">Semi-pro Chinese dancer</span><span class="pill ps">Trained · Absolute Fitness Samui</span></div><div class="inst-bio">Lifelong dancer, gym obsessive, pilates convert. Built Reform. because she wanted a studio that trained the body like a dancer — long, controlled, precise. Teaches 1–2 classes/week and privates. The face of @reform.hk.</div></div>
       </div>
+      <div class="sl" style="margin-top:1.5rem;margin-bottom:.75rem">Main instructors</div>
       <div class="inst-card">
         <div class="avatar" style="background:#e8e4dc;color:#3a3831">Lo</div>
-        <div><div class="inst-name">Loretta</div><div class="inst-handle">@lorlee</div><div class="inst-tags"><span class="pill ps">Yoga → Pilates</span><span class="pill pa">Lululemon community</span><span class="pill ps">Rosewood reformer</span></div><div class="inst-bio">Kylie's Absolute classmate. Established Lululemon community = direct student pipeline. Currently teaching at Rosewood. Transitioning to full-time. Anchor instructor.</div></div>
+        <div><div class="inst-name">Loretta</div><div class="inst-handle">@lorlee</div><div class="inst-tags"><span class="pill ps">Yoga → Pilates</span><span class="pill pa">Lululemon community lead</span><span class="pill ps">Rosewood Hotel</span></div><div class="inst-bio">Yoga-trained, pilates-certified. Currently teaching at Rosewood — her students follow her everywhere. Anchor instructor at Reform. and the reason half of her Lululemon community will walk through the door on day one.</div></div>
       </div>
       <div class="inst-card">
         <div class="avatar" style="background:#e8f0e4;color:#3a5c2d">Li</div>
-        <div><div class="inst-name">Libby Liu</div><div class="inst-handle">@libby033</div><div class="inst-tags"><span class="pill pi">HK Dance Company</span><span class="pill pb">Polestar certified</span><span class="pill pb">Barreformer lead</span></div><div class="inst-bio">Full-time dancer at HKDC. Polestar certified. Designated Barreformer Programme Lead — dance background gives the format technical credibility. Kylie's mother's former student.</div><div class="inst-note">Pair with Clara for Barreformer programme development.</div></div>
+        <div><div class="inst-name">Libby Liu</div><div class="inst-handle">@libby033</div><div class="inst-tags"><span class="pill pi">Hong Kong Dance Company</span><span class="pill pb">Polestar certified</span><span class="pill pb">Barreformer Programme Lead</span></div><div class="inst-bio">Full-time professional dancer at Hong Kong Dance Company. Polestar certified instructor. She is the reason the Barreformer programme at Reform. moves the way it does — technically rigorous, deeply physical, unmistakably dance.</div><div class="inst-note">Pair with Clara for Barreformer programme development.</div></div>
       </div>
-      <div class="inst-card">
+      <div class="inst-card" style="opacity:0.75">
         <div class="avatar" style="background:#f5eeec;color:#6b4a44">Sy</div>
-        <div><div class="inst-name">Sylvia</div><div class="inst-handle">@thelivingsylvie · 2,286 followers</div><div class="inst-tags"><span class="pill ps">Yoga → Pilates</span><span class="pill pb">Polestar certified</span><span class="pill ps">E-RYT200</span><span class="pill ps">Childhood friend</span></div><div class="inst-bio">Kylie's childhood friend. Polestar Pilates instructor + E-RYT200 yoga teacher. Offers private + corporate sessions. Clean editorial aesthetic — fits Reform. perfectly. 2,286 followers.</div></div>
+        <div><div class="inst-name">Sylvia</div><div class="inst-handle">@thelivingsylvie · 2,286 followers</div><div class="inst-tags"><span class="pill ps">Yoga → Pilates</span><span class="pill pb">Polestar certified</span><span class="pill ps">E-RYT200</span><span class="pill pr">Signed with Yoga Senses</span></div><div class="inst-bio">Polestar certified pilates instructor + E-RYT200 yoga teacher. Dancer's lines, a yogi's breath control. Available for private sessions only at Reform. — signed exclusivity with Yoga Senses for group classes.</div><div class="inst-note">Privates only · no group schedule</div></div>
+      </div></div>
       </div>
+      <div class="sl" style="margin-top:1.5rem;margin-bottom:.75rem">Intro specialist</div>
       <div class="inst-card">
         <div class="avatar" style="background:#fef3e2;color:#8a5a00">Sa</div>
-        <div><div class="inst-name">Sadie Szeto</div><div class="inst-handle">@sadiestk</div><div class="inst-tags"><span class="pill pa">BASI — exams Apr 2026</span><span class="pill ps">ABC vibe</span></div><div class="inst-bio">BASI training, exams April 2026. ABC energy — resonates with a specific audience segment. Assign Intro + Foundations post-cert.</div></div>
+        <div><div class="inst-name">Sadie Szeto</div><div class="inst-handle">@sadiestk · Cantonese, Mandarin, English</div><div class="inst-tags"><span class="pill pa">BASI Comprehensive — Apr 2026</span><span class="pill ps">UCSB Comms + Media Arts</span><span class="pill ps">Figma · Lightroom · Photoshop</span></div><div class="inst-bio">BASI Comprehensive completing April 2026. Trilingual — Cantonese, Mandarin, English. Former PR Director, trained eye for brand and community. Already teaching pilates internationally before she's even certified. The instructor who makes first-timers feel like they belong. Intro + Foundations specialist post-cert.</div><div class="inst-note">PR + Figma background useful for content and instructor comms.</div></div>
+      </div></div>
       </div>
+      <div class="sl" style="margin-top:1.5rem;margin-bottom:.75rem">In training</div>
       <div class="inst-card">
         <div class="avatar" style="background:#e1f5ee;color:#0f6e56">Cl</div>
-        <div><div class="inst-name">Clara</div><div class="inst-handle">@clarafann</div><div class="inst-tags"><span class="pill pi">Ballet instructor</span><span class="pill pb">Barreformer co-dev</span><span class="pill pa">Training starting</span></div><div class="inst-bio">Former ballet instructor. Starting pilates training. Co-developing Barreformer with Libby. Will own Ballet Core as signature class.</div></div>
+        <div><div class="inst-name">Clara</div><div class="inst-handle">@clarafann</div><div class="inst-tags"><span class="pill pi">Ballet instructor</span><span class="pill pb">Barreformer co-developer</span><span class="pill pa">Pilates training starting</span></div><div class="inst-bio">Professional ballet instructor transitioning into pilates. Co-developing the Barreformer programme with Libby — between them they have the dance technique to make it genuinely different. Ballet Core is hers. When she teaches it, you'll feel it in your posture for days.</div></div>
       </div>
       <div class="inst-card">
+        <div class="avatar" style="background:#f5eeec;color:#6b4a44">Ra</div>
+        <div><div class="inst-name">Rasika Fhaikhao</div><div class="inst-handle">@auurai · 2,492 followers · Thai in HK</div><div class="inst-tags"><span class="pill pi">HK Disneyland full-time dancer</span><span class="pill pb">Pilates instructor · @rasika.pilates</span><span class="pill ps">Dance · Arts Education</span></div><div class="inst-bio">Professional performer and full-time dancer at Hong Kong Disneyland. Certified pilates instructor with her own dedicated pilates account. The dancer-body-by-design instructor — her movement quality is exactly the Reform. aesthetic. Strong HK community, trilingual presence.</div><div class="inst-note">Her @rasika.pilates account is an asset — built-in audience for Reform. content.</div></div>
+      </div>
+
+      <div class="inst-card">
         <div class="avatar" style="background:#e8f0e4;color:#3a5c2d">Ju</div>
-        <div><div class="inst-name">Judith</div><div class="inst-handle">Profile TBC</div><div class="inst-tags"><span class="pill psg">Registered Physio</span><span class="pill pa">Training as instructor</span><span class="pill pr">Non-compete until Jan 2027</span></div><div class="inst-bio">Registered physiotherapist. Non-compete until Jan 2027 — joining as instructor first. Physio sessions to launch Year 2 once non-compete clears.</div><div class="inst-note">Follow up Jan 2027 for physio sessions.</div></div>
+        <div><div class="inst-name">Judith</div><div class="inst-handle">Profile TBC</div><div class="inst-tags"><span class="pill psg">Registered Physio</span><span class="pill pa">Training as instructor</span><span class="pill pr">Non-compete until Jan 2027</span></div><div class="inst-bio">Registered physiotherapist. Joining Reform. as an instructor first — physio sessions launch Year 2 once her non-compete clears Jan 2027. Having a physio on the team means the way we programme is different from day one, even before she's treating clients.</div><div class="inst-note">Follow up Jan 2027 for physio sessions.</div></div>
       </div>
 
       <div class="inst-card" style="border-left:3px solid #9a9590;opacity:0.7">
@@ -936,7 +977,7 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f2ee; color: #1a1a1a; 
       <div class="sl">Programme mentor</div>
       <div class="inst-card" style="border-left:3px solid var(--ink)">
         <div class="avatar" style="background:var(--ink);color:var(--blush)">Ve</div>
-        <div><div class="inst-name">Vesta Ko 高麗</div><div class="inst-handle">@vesta_ko · 53.4K followers</div><div class="inst-tags"><span class="pill pi">Pro Ballroom Dancer</span><span class="pill pg">Polestar Mentor in Training</span><span class="pill pb">Certified Reformer + Mat</span><span class="pill ps">EYT500</span></div><div class="inst-bio">Professional ballroom dancer from age 10. Polestar Mentor in Training — will train the instructor team and co-develop programmes. 53.4K IG following. Consider a launch collab post.</div><div class="inst-note">Internal mentor role only.</div></div>
+        <div><div class="inst-name">V.K. — Programme Mentor</div><div class="inst-handle">53.4K followers</div><div class="inst-tags"><span class="pill pi">Pro Ballroom Dancer</span><span class="pill pg">Polestar Mentor in Training</span><span class="pill pb">Certified Reformer + Mat</span><span class="pill ps">EYT500</span><span class="pill pr">Signed with Polestar — not on website</span></div><div class="inst-bio">Officially confirmed as Reform. programme mentor. Signed with Polestar — cannot appear on website or public-facing materials. Stealth role only: team training, quarterly programme development, class design behind the scenes. Her influence is in the product, not the branding.</div><div class="inst-note">Do not mention on website, IG, or any public content. Internal mentor only.</div></div>
       </div>
     </div>
   </div>
@@ -1072,7 +1113,7 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f2ee; color: #1a1a1a; 
         <tbody>
           <tr><td>01</td><td><strong>Education</strong></td><td>What is Barreformer? Movement breakdowns. Libby + Clara as faces.</td><td>2–3×/wk</td></tr>
           <tr><td>02</td><td><strong>Studio life</strong></td><td>Reno reveal · machines arriving · morning setup BTS</td><td>2×/wk</td></tr>
-          <tr><td>03</td><td><strong>Instructor spotlight</strong></td><td>Each instructor intro Reel pre-launch. Vesta collab at opening.</td><td>1–2×/wk</td></tr>
+          <tr><td>03</td><td><strong>Instructor spotlight</strong></td><td>Each instructor intro Reel pre-launch. mentor collab at opening.</td><td>1–2×/wk</td></tr>
           <tr><td>04</td><td><strong>Transformation</strong></td><td>Client stories · mobility before/after. Loretta's community for early testimonials.</td><td>1×/wk</td></tr>
           <tr><td>05</td><td><strong>Offers & schedule</strong></td><td>Class reminders · packs · founding member · Girls' Date · student deals</td><td>2–3×/wk</td></tr>
           <tr><td>06</td><td><strong>Community</strong></td><td>Events · partner collabs · tag reposts · student spotlights</td><td>1×/wk</td></tr>
@@ -1102,7 +1143,7 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f2ee; color: #1a1a1a; 
           <tr><td><strong>1–2</strong></td><td>Teaser — location reveal, "something coming to Central", no logo yet</td></tr>
           <tr><td><strong>2–3</strong></td><td>Reno BTS — black tile wall reveal, fake ceiling going in, Cherry on site</td></tr>
           <tr><td><strong>3–4</strong></td><td>Brand reveal — Unbounded "REFORM." logo drop, tagline moment</td></tr>
-          <tr><td><strong>4–5</strong></td><td>Instructor intros — Kylie first, then Libby (BF lead), Vesta (mentor authority)</td></tr>
+          <tr><td><strong>4–5</strong></td><td>Instructor intros — Kylie first, then Libby (BF lead), mentor</td></tr>
           <tr><td><strong>5–6</strong></td><td>"What is Barreformer?" hero Reel — Libby + Clara demo</td></tr>
           <tr><td><strong>6–7</strong></td><td>Founding Member offer — 20-class HKD 4,500 · first 30 only · tag for free gift set · student offer announced</td></tr>
           <tr><td><strong>7–8</strong></td><td>Schedule live · ClassPass listing · booking link · tag programme launches</td></tr>
@@ -1162,16 +1203,16 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f2ee; color: #1a1a1a; 
     <div class="sec">
       <div class="sl">Merch range</div>
       <div class="table-card"><div class="table-wrap"><table>
-        <thead><tr><th>Item</th><th>Colourway</th><th>Retail HKD</th><th>Cost HKD</th><th>Use</th></tr></thead>
+        <thead><tr><th>Item</th><th>Colourway</th><th>Retail HKD</th><th>Use</th></tr></thead>
         <tbody>
-          <tr><td>Hair clip (claw)</td><td>Matte black / blush · "R." debossed</td><td>60–90</td><td>10–18</td><td>Tag reward Tier 2</td></tr>
-          <tr><td>Scrunchie set ×3</td><td>Blush satin · "R." charm</td><td>60–80</td><td>8–15</td><td>Tag reward · gift bag</td></tr>
-          <tr><td>Headband</td><td>Blush or ink · Unbounded print</td><td>80–120</td><td>20–35</td><td>Tag reward · essentials</td></tr>
-          <tr><td>Grippy socks</td><td>Blush or ink · "REFORM." cuff</td><td>100–150</td><td>25–40</td><td>Required for class</td></tr>
-          <tr><td>Water bottle</td><td>Matte black · "REFORM." debossed</td><td>250–380</td><td>80–120</td><td>Premium · class prop</td></tr>
-          <tr><td>Tote bag</td><td>Natural canvas · Unbounded print</td><td>200–300</td><td>40–60</td><td>Founding member gift</td></tr>
-          <tr><td>T-shirt</td><td>Sand or ink · small chest mark</td><td>280–380</td><td>60–90</td><td>Premium merch</td></tr>
-          <tr><td>Gift set (founding month)</td><td>Branded box · blush tissue</td><td>420–480</td><td>100–130</td><td>Tier 1 reward · retail</td></tr>
+          <tr><td>Hair clip (claw)</td><td>Matte black / blush · "R." debossed</td><td>60–90</td><td>Tag reward</td></tr>
+          <tr><td>Scrunchie set ×3</td><td>Blush satin · "R." charm</td><td>60–80</td><td>Tag reward</td></tr>
+          <tr><td>Headband</td><td>Blush or ink · Unbounded print</td><td>80–120</td><td>Tag reward</td></tr>
+          <tr><td>Grippy socks</td><td>Blush or ink · "REFORM." cuff</td><td>100–150</td><td>Required</td></tr>
+          <tr><td>Water bottle</td><td>Matte black · "REFORM." debossed</td><td>250–380</td><td>Premium</td></tr>
+          <tr><td>Tote bag</td><td>Natural canvas · Unbounded print</td><td>200–300</td><td>Founding</td></tr>
+          <tr><td>T-shirt</td><td>Sand or ink · small chest mark</td><td>280–380</td><td>Premium</td></tr>
+          <tr><td>Gift set (founding month)</td><td>Branded box · blush tissue</td><td>420–480</td><td>Tier 1 reward · retail</td></tr>
         </tbody>
       </table></div></div>
       <div class="callout gray"><div class="callout-body">Order priority: hair clips + scrunchies + headbands + grippy socks first (3–6 week lead, needed at launch). Tote + t-shirt follow. Accessories align with machine delivery.</div></div>
@@ -1192,7 +1233,7 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f2ee; color: #1a1a1a; 
       </div>
       <div class="comp-card" style="border-left:3px solid var(--gray)">
         <div class="ir"><div class="comp-name">Casa Wellness HK</div><span class="pill pb">Direct</span><span class="pill ps">14/F Tak Woo House — 1 block</span><span class="pill ps">3,203 followers</span></div>
-        <div class="comp-detail">One block away. Pilates + Gyrotonic. Monthly: HKD 1,680 unlimited (1 class/day). "Our Body is Our Home." Their differentiator is Gyrotonic; Reform's is Barreformer. Watch their schedule to avoid timing clashes. Vesta Ko follows them.</div>
+        <div class="comp-detail">One block away. Pilates + Gyrotonic. Monthly: HKD 1,680 unlimited (1 class/day). "Our Body is Our Home." Their differentiator is Gyrotonic; Reform's is Barreformer. Watch their schedule to avoid timing clashes. Programme mentor follows them.</div>
         <div class="comp-note">Nearest geographic competitor — monitor their Central class schedule closely.</div>
       </div>
       <div class="comp-card">
@@ -1301,13 +1342,15 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f2ee; color: #1a1a1a; 
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:0">
         <div style="padding:14px 16px;border-right:1px solid var(--border2)">
           <div style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--blush);margin-bottom:8px">English</div>
-          <div style="font-size:13px;color:var(--text);line-height:1.8;margin-bottom:8px">Reform. is a boutique reformer pilates studio in the heart of Central. Founded by Kylie — a lifelong gym rat and semi-professional dancer who wanted a studio that was serious without being intimidating.</div>
+          <div style="font-size:13px;color:var(--text);line-height:1.8;margin-bottom:8px">Reform. is a boutique reformer pilates studio in the heart of Central. Founded by Kylie — dancer, gym obsessive, and the person who decided Hong Kong needed a studio built differently.</div>
+          <div style="font-size:13px;color:var(--text);line-height:1.8;margin-bottom:8px">Most of our instructors are professional or semi-professional dancers. That's not a coincidence — it's the whole point. The way dancers train their bodies is exactly what pilates was designed for. Long, controlled, precise. You feel it in your posture, your lines, the way you carry yourself.</div>
           <div style="font-size:13px;color:var(--text);line-height:1.8">We cap every class at 6. That's not a limitation — it's the point. You get the machine, the space, and the attention you came for.</div>
           <div style="font-size:11px;color:var(--blush);margin-top:8px;font-style:italic">reset. reform. repeat.</div>
         </div>
         <div style="padding:14px 16px">
           <div style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--rosy);margin-bottom:8px">繁體中文</div>
-          <div style="font-size:13px;color:var(--text);line-height:1.8;margin-bottom:8px">Reform. 係中環嘅精品普拉提工作室。由 Kylie 創辦 — 一個健身狂兼半職業舞蹈員，想打造一間認真但唔嚇人嘅工作室。</div>
+          <div style="font-size:13px;color:var(--text);line-height:1.8;margin-bottom:8px">Reform. 係中環嘅精品普拉提工作室。由 Kylie 創辦 — 舞蹈員、健身狂，同埋一個決定香港需要一間唔同嘅工作室嘅人。</div>
+          <div style="font-size:13px;color:var(--text);line-height:1.8;margin-bottom:8px">我哋大部份導師都係職業或半職業舞蹈員。唔係巧合——係整個概念嘅核心。舞蹈員訓練身體嘅方式，就係普拉提本來嘅設計。修長、控制、精準。你會感受到係你嘅體態、你嘅線條、你行路嘅方式。</div>
           <div style="font-size:13px;color:var(--text);line-height:1.8">每班只收6人。唔係限制，係承諾。你嚟嘅係一部機、一個空間、同埋真正嘅關注。</div>
           <div style="font-size:11px;color:var(--blush);margin-top:8px;font-style:italic">重置。改變。重複。</div>
         </div>
@@ -1572,7 +1615,7 @@ blockquote {
         <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-name"><span class="pill pa" style="margin-right:6px">Med</span>Sadie — BASI exams April 2026</div><div class="task-owner">Sadie</div></div>
         <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-name"><span class="pill pa" style="margin-right:6px">Med</span>Clara — start pilates training programme</div><div class="task-owner">Clara</div></div>
         <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-name"><span class="pill pa" style="margin-right:6px">Med</span>Judith — confirm private insurance panel eligibility</div><div class="task-owner">Judith</div></div>
-        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-name"><span class="pill pa" style="margin-right:6px">Med</span>Vesta — confirm team training schedule + programme dev scope</div><div class="task-owner">Vesta</div></div>
+        <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-name"><span class="pill pa" style="margin-right:6px">Med</span>Confirm mentor training schedule + programme dev scope</div><div class="task-owner">V.K.</div></div>
         <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-name"><span class="pill pa" style="margin-right:6px">Med</span>Loretta — brief on Lululemon cross-promotion plan before she transitions</div><div class="task-owner">Loretta</div></div>
         <div class="task-row"><div class="task-check" onclick="toggleTask(this)"></div><div class="task-name"><span class="pill pa" style="margin-right:6px">Med</span>Website build — Squarespace or Framer, bilingual EN/TC, student offer page</div><div class="task-owner">TBC</div></div>
       </div>
@@ -1650,7 +1693,7 @@ blockquote {
       <div class="pillar-card" style="border-top:3px solid var(--blush)">
         <div class="pillar-num">03</div>
         <div class="pillar-title">Instructor spotlight</div>
-        <div class="pillar-detail">Each instructor gets their own intro Reel before launch. Kylie as founder, Libby for BF credibility, Vesta for mentor authority.</div>
+        <div class="pillar-detail">Each instructor gets their own intro Reel before launch. Kylie as founder, Libby for BF credibility, mentor for authority.</div>
         <div class="pillar-freq">1–2× / week</div>
       </div>
       <div class="pillar-card" style="border-top:3px solid var(--rosy)">
@@ -1839,7 +1882,7 @@ blockquote {
       <div class="week-body">
         <div class="post-row"><div class="post-day">Mon 13</div><div><span class="post-tag pt-reel">Reel</span></div><div class="post-caption">Libby intro — "Meet our Barreformer lead." HKDC dancer + Polestar cert. 20s clip of her on the reformer doing something beautiful. "She's the reason Barreformer works here."</div><div class="post-platform">IG</div></div>
         <div class="post-row"><div class="post-day">Tue 14</div><div><span class="post-tag pt-feed">Feed</span></div><div class="post-caption">Loretta intro — photo + caption. Lululemon community angle. "She's bringing her whole community with her."</div><div class="post-platform">IG</div></div>
-        <div class="post-row"><div class="post-day">Wed 15</div><div><span class="post-tag pt-reel">Reel</span></div><div class="post-caption">Vesta collab Reel — "our programme mentor." Ballroom dancer → pilates. Authority + credibility. Ask Vesta to post a version on @vesta_ko too — 53K reach.</div><div class="post-platform">IG + Vesta cross-post</div></div>
+        <div class="post-row"><div class="post-day">Wed 15</div><div><span class="post-tag pt-reel">Reel</span></div><div class="post-caption">Mentor collab Reel — "our programme mentor." Ballroom dancer → pilates. Authority + credibility. Ask mentor to cross-post on their accountted] too — 53K reach.</div><div class="post-platform">IG + mentor cross-post</div></div>
         <div class="post-row"><div class="post-day">Thu 16</div><div><span class="post-tag pt-feed">Feed</span></div><div class="post-caption">Clara intro — ballet instructor turned pilates. "She's developing Ballet Core for us." Photo of her at the barre or reformer.</div><div class="post-platform">IG</div></div>
         <div class="post-row"><div class="post-day">Fri 17</div><div><span class="post-tag pt-reel">Reel</span></div><div class="post-caption">"Why max 6?" — Kylie explains the small group philosophy. 20s talking head. Counter to O2 next door without naming them.</div><div class="post-platform">IG</div></div>
         <div class="post-row"><div class="post-day">Sat 18</div><div><span class="post-tag pt-feed">Feed</span></div><div class="post-caption">Judith intro — "our physiotherapist." Insurance-claimable sessions angle. Unique differentiator post.</div><div class="post-platform">IG + XHS</div></div>
@@ -1903,7 +1946,7 @@ blockquote {
         <div class="cal-day"><div class="day-num">13</div></div>
         <div class="cal-day"><div class="day-num">13</div><span class="post-tag pt-reel">Libby intro</span></div>
         <div class="cal-day"><div class="day-num">14</div><span class="post-tag pt-feed">Loretta intro</span></div>
-        <div class="cal-day"><div class="day-num">15</div><span class="post-tag pt-collab">Vesta collab</span></div>
+        <div class="cal-day"><div class="day-num">15</div><span class="post-tag pt-collab">Mentor collab</span></div>
         <div class="cal-day"><div class="day-num">16</div><span class="post-tag pt-feed">Clara intro</span></div>
         <div class="cal-day"><div class="day-num">17</div><span class="post-tag pt-reel">Why max 6</span></div>
         <div class="cal-day"><div class="day-num">18</div><span class="post-tag pt-feed">Judith intro</span></div>
@@ -1979,7 +2022,7 @@ blockquote {
   </div>
   <div class="sec">
     <div class="sl">June focus</div>
-    <div class="co ink"><div class="co-t">This is the real launch</div><div class="co-b">Full schedule live. Open to public. Press features (aim for Tatler, Time Out HK week of launch). Launch event — invite press, founding members, Vesta, Loretta's Lululemon community. Wear Rame collab drops. Content volume peaks this month then settles into the ongoing rhythm.</div></div>
+    <div class="co ink"><div class="co-t">This is the real launch</div><div class="co-b">Full schedule live. Open to public. Press features (aim for Tatler, Time Out HK week of launch). Launch event — invite press, founding members, our mentor, Loretta's Lululemon community. Wear Rame collab drops. Content volume peaks this month then settles into the ongoing rhythm.</div></div>
 
     <div class="sl">Week-by-week</div>
     <div style="background:var(--white);border:1px solid var(--border2);border-radius:10px;overflow:hidden;margin-bottom:1rem">
@@ -1993,7 +2036,7 @@ blockquote {
         <div style="padding:10px 14px;border-bottom:1px solid var(--border2);font-weight:500">Jun 15–21</div>
         <div style="padding:10px 14px;border-bottom:1px solid var(--border2);color:var(--text2)">Settle into rhythm. Ongoing content pillars take over. Push pack sales. 10-class as lead offer. Testimonial content from first wave of public students.</div>
         <div style="padding:10px 14px;font-weight:500">Jun 22–30</div>
-        <div style="padding:10px 14px;color:var(--text2)">Month 1 review. What's working? ClassPass conversion rate check. Adjust Vesta's Q2 programme if needed. Plan July — mid-summer content, potential collab #2.</div>
+        <div style="padding:10px 14px;color:var(--text2)">Month 1 review. What's working? ClassPass conversion rate check. Adjust Q2 programme if needed. Plan July — mid-summer content, potential collab #2.</div>
       </div>
     </div>
 
@@ -2162,133 +2205,7 @@ blockquote {
 </div>
 
 <!-- P&L SECTION (hidden until password) -->
-<div id="section-pl" class="section">
-  <div class="sec">
-    <div class="sl">Start-up costs</div>
-    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:1rem;"><div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:1rem;border-radius:10px;"><div style="background:var(--white);border:1px solid var(--border2);border-radius:10px;overflow:hidden;min-width:600px;">
-      <table style="width:100%;border-collapse:collapse;font-size:13px">
-        <thead><tr style="background:var(--ink)">
-          <th style="padding:10px 14px;text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--sand);border-bottom:1px solid rgba(255,255,255,.1)">Item</th>
-          <th style="padding:10px 14px;text-align:right;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--sand);border-bottom:1px solid rgba(255,255,255,.1)">HKD</th>
-          <th style="padding:10px 14px;text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--gray);border-bottom:1px solid rgba(255,255,255,.1)">Notes</th>
-        </tr></thead>
-        <tbody>
-          <tr><td style="padding:9px 14px;border-bottom:1px solid var(--border2)">Rent — pre-opening (Nov 25 – Apr 26 · 6 months)</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);text-align:right;font-weight:500">120,000</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);color:var(--text2);font-size:12px">HKD 20k/mo × 6</td></tr>
-          <tr style="background:var(--sand2)"><td style="padding:9px 14px;border-bottom:1px solid var(--border2)">Reformers × 6</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);text-align:right;font-weight:500">150,000</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);color:var(--text2);font-size:12px">~HKD 25k each</td></tr>
-          <tr><td style="padding:9px 14px;border-bottom:1px solid var(--border2)">Cadillac × 1</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);text-align:right;font-weight:500">25,000</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);color:var(--text2);font-size:12px">~HKD 25k</td></tr>
-          <tr style="background:var(--sand2)"><td style="padding:9px 14px;border-bottom:1px solid var(--border2)">Chair × 1</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);text-align:right;font-weight:500">25,000</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);color:var(--text2);font-size:12px">~HKD 25k</td></tr>
-          <tr><td style="padding:9px 14px;border-bottom:1px solid var(--border2)">Renovations (fit-out, fake ceiling, tiles, mirror, lighting)</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);text-align:right;font-weight:500">80,000</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);color:var(--text2);font-size:12px">Estimate — confirm with Cherry</td></tr>
-          <tr style="background:var(--sand2)"><td style="padding:9px 14px;border-bottom:1px solid var(--border2)">Branding &amp; signage (logo plate, A-board, mirror decals)</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);text-align:right;font-weight:500">15,000</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);color:var(--text2);font-size:12px">Estimate</td></tr>
-          <tr><td style="padding:9px 14px;border-bottom:1px solid var(--border2)">Merch initial stock (socks, headbands, hair clips, scrunchies, totes)</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);text-align:right;font-weight:500">20,000</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);color:var(--text2);font-size:12px">Estimate for first batch</td></tr>
-          <tr style="background:var(--sand2)"><td style="padding:9px 14px;border-bottom:1px solid var(--border2)">Booking system setup (Mindbody/Hapana)</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);text-align:right;font-weight:500">5,000</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);color:var(--text2);font-size:12px">Setup + first month</td></tr>
-          <tr><td style="padding:9px 14px;border-bottom:1px solid var(--border2)">Photography / content shoot (pre-launch)</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);text-align:right;font-weight:500">15,000</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);color:var(--text2);font-size:12px">Estimate</td></tr>
-          <tr style="background:var(--sand2)"><td style="padding:9px 14px;border-bottom:1px solid var(--border2)">Miscellaneous / contingency</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);text-align:right;font-weight:500">20,000</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);color:var(--text2);font-size:12px">10% buffer</td></tr>
-          <tr style="background:var(--ink)"><td style="padding:10px 14px;font-weight:700;color:var(--sand)">Total start-up</td><td style="padding:10px 14px;text-align:right;font-weight:700;color:var(--blush);font-size:15px">475,000</td><td style="padding:10px 14px;color:var(--gray);font-size:12px">Before first revenue day</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
 
-  <div class="sec">
-    <div class="sl">Monthly fixed costs (ongoing from open)</div>
-    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:1rem;"><div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:1rem;border-radius:10px;"><div style="background:var(--white);border:1px solid var(--border2);border-radius:10px;overflow:hidden;min-width:600px;">
-      <table style="width:100%;border-collapse:collapse;font-size:13px">
-        <thead><tr style="background:var(--sand)"><th style="padding:9px 14px;text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--text2);border-bottom:1px solid var(--border)">Item</th><th style="padding:9px 14px;text-align:right;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--text2);border-bottom:1px solid var(--border)">HKD/mo</th><th style="padding:9px 14px;text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--text2);border-bottom:1px solid var(--border)">Notes</th></tr></thead>
-        <tbody>
-          <tr><td style="padding:9px 14px;border-bottom:1px solid var(--border2)">Rent</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);text-align:right;font-weight:500">20,000</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);color:var(--text2);font-size:12px">Fixed</td></tr>
-          <tr style="background:var(--sand2)"><td style="padding:9px 14px;border-bottom:1px solid var(--border2)">Instructor fees (est. 4 instructors × avg HKD 8k)</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);text-align:right;font-weight:500">32,000</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);color:var(--text2);font-size:12px">Varies — adjust as roster grows</td></tr>
-          <tr><td style="padding:9px 14px;border-bottom:1px solid var(--border2)">Booking system (Mindbody/Hapana)</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);text-align:right;font-weight:500">1,500</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);color:var(--text2);font-size:12px">Estimate</td></tr>
-          <tr style="background:var(--sand2)"><td style="padding:9px 14px;border-bottom:1px solid var(--border2)">Utilities (electricity, water, wifi)</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);text-align:right;font-weight:500">4,000</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);color:var(--text2);font-size:12px">Estimate — AC-heavy studio</td></tr>
-          <tr><td style="padding:9px 14px;border-bottom:1px solid var(--border2)">Insurance (public liability + equipment)</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);text-align:right;font-weight:500">2,000</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);color:var(--text2);font-size:12px">Estimate</td></tr>
-          <tr style="background:var(--sand2)"><td style="padding:9px 14px;border-bottom:1px solid var(--border2)">Marketing / content (ad spend + production)</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);text-align:right;font-weight:500">5,000</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);color:var(--text2);font-size:12px">Scale up in launch months</td></tr>
-          <tr><td style="padding:9px 14px;border-bottom:1px solid var(--border2)">Supplies (cleaning, towels, accessories top-up)</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);text-align:right;font-weight:500">2,000</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);color:var(--text2);font-size:12px">Estimate</td></tr>
-          <tr style="background:var(--sand2)"><td style="padding:9px 14px;border-bottom:1px solid var(--border2)">Accounting / misc admin</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);text-align:right;font-weight:500">2,000</td><td style="padding:9px 14px;border-bottom:1px solid var(--border2);color:var(--text2);font-size:12px">Estimate</td></tr>
-          <tr style="background:var(--ink)"><td style="padding:10px 14px;font-weight:700;color:var(--sand)">Total fixed/mo</td><td style="padding:10px 14px;text-align:right;font-weight:700;color:var(--blush);font-size:15px">68,500</td><td style="padding:10px 14px;color:var(--gray);font-size:12px">Before revenue</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <div class="sec">
-    <div class="sl">Revenue scenarios — per month (post official open)</div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-bottom:1rem">
-      <div style="background:var(--white);border:1px solid var(--border2);border-radius:10px;padding:1.25rem">
-        <div style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--text3);margin-bottom:8px">Conservative</div>
-        <div style="font-size:11px;color:var(--text2);line-height:1.8;margin-bottom:10px">
-          20 classes/wk × avg 4 students × avg HKD 300/class<br>
-          + HKD 10k privates/month<br>
-          + HKD 5k merch
-        </div>
-        <div style="font-size:22px;font-weight:500;color:var(--text)">~103,000</div>
-        <div style="font-size:11px;color:var(--text3);margin-top:3px">HKD/month gross</div>
-        <div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border2);font-size:12px">
-          <span style="color:var(--text2)">After costs: </span>
-          <span style="color:#3a7a3a;font-weight:500">+34,500</span>
-        </div>
-      </div>
-      <div style="background:var(--white);border:2px solid var(--blush);border-radius:10px;padding:1.25rem">
-        <div style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--blush);margin-bottom:8px">Target ★</div>
-        <div style="font-size:11px;color:var(--text2);line-height:1.8;margin-bottom:10px">
-          30 classes/wk × avg 5 students × avg HKD 310/class<br>
-          + HKD 20k privates/month<br>
-          + HKD 10k merch
-        </div>
-        <div style="font-size:22px;font-weight:500;color:var(--text)">~192,000</div>
-        <div style="font-size:11px;color:var(--text3);margin-top:3px">HKD/month gross</div>
-        <div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border2);font-size:12px">
-          <span style="color:var(--text2)">After costs: </span>
-          <span style="color:#3a7a3a;font-weight:500">+123,500</span>
-        </div>
-      </div>
-      <div style="background:var(--white);border:1px solid var(--border2);border-radius:10px;padding:1.25rem">
-        <div style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--text3);margin-bottom:8px">Optimistic</div>
-        <div style="font-size:11px;color:var(--text2);line-height:1.8;margin-bottom:10px">
-          40 classes/wk × 6 students × avg HKD 320/class<br>
-          + HKD 30k privates/month<br>
-          + HKD 15k merch + studio hire
-        </div>
-        <div style="font-size:22px;font-weight:500;color:var(--text)">~291,000</div>
-        <div style="font-size:11px;color:var(--text3);margin-top:3px">HKD/month gross</div>
-        <div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border2);font-size:12px">
-          <span style="color:var(--text2)">After costs: </span>
-          <span style="color:#3a7a3a;font-weight:500">+222,500</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="sec">
-    <div class="sl">Breakeven</div>
-    <div style="background:var(--white);border:1px solid var(--border2);border-radius:10px;padding:1.25rem;margin-bottom:1rem">
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;text-align:center">
-        <div>
-          <div style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--text3);margin-bottom:6px">Monthly breakeven</div>
-          <div style="font-family:'DM Serif Display',serif;font-size:26px">68,500</div>
-          <div style="font-size:11px;color:var(--text2);margin-top:3px">HKD fixed costs/mo</div>
-        </div>
-        <div>
-          <div style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--text3);margin-bottom:6px">Classes to breakeven</div>
-          <div style="font-family:'DM Serif Display',serif;font-size:26px">~73</div>
-          <div style="font-size:11px;color:var(--text2);margin-top:3px">classes/mo at avg 3 students × HKD 310</div>
-        </div>
-        <div>
-          <div style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--text3);margin-bottom:6px">Start-up payback</div>
-          <div style="font-family:'DM Serif Display',serif;font-size:26px">~4 mo</div>
-          <div style="font-size:11px;color:var(--text2);margin-top:3px">at target scenario</div>
-        </div>
-      </div>
-    </div>
-    <div style="background:var(--sand);border-radius:10px;padding:1rem 1.25rem;border-left:3px solid var(--blush);font-size:12px;color:var(--text2);line-height:1.7">
-      All figures are estimates. Instructor costs, reno costs, and machine prices should be confirmed with Cherry and updated here. Revenue assumes consistent class fill rates — soft open month (April/May) will be lower. Founding member pre-sales (target HKD 135,000) offset first 2 months of fixed costs significantly.
-    </div>
-  </div>
-
-  <div style="display:flex;justify-content:flex-end;margin-top:1rem">
-    <button onclick="lockPL()" style="background:transparent;border:1px solid var(--border);color:var(--text3);padding:7px 16px;font-family:'DM Sans',sans-serif;font-size:11px;border-radius:4px;cursor:pointer">🔒 Lock</button>
-  </div>
-</div>
-
-</div>
 
 
 
@@ -2725,7 +2642,6 @@ function waitFonts() {
   return _fontsReady;
 }
 
-var plUnlocked = false;
 
 function openNav() {
   document.getElementById('nav-sheet').classList.add('open');
@@ -2735,11 +2651,6 @@ function closeNav() {
 }
 function go(id) {
   closeNav();
-  if (id === 'pl' && !plUnlocked) {
-    document.getElementById('pl-overlay').classList.add('visible');
-    setTimeout(function() { document.getElementById('pl-pw').focus(); }, 100);
-    return;
-  }
   document.querySelectorAll('.nav-link').forEach(function(l) {
     l.classList.remove('active');
     var oc = l.getAttribute('onclick') || '';
@@ -2750,27 +2661,11 @@ function go(id) {
   if (id === 'teaser') waitFonts().then(buildTeaser);
   if (id === 'print') waitFonts().then(function(){ buildPrint(); });
 }
-function checkPL() {
-  if (document.getElementById('pl-pw').value === 'reform2026') {
-    plUnlocked = true;
-    document.getElementById('pl-overlay').classList.remove('visible');
-    document.getElementById('pl-pw').value = '';
-    document.getElementById('pl-err').style.display = 'none';
-    go('pl');
-  } else {
-    document.getElementById('pl-err').style.display = 'block';
-    document.getElementById('pl-pw').value = '';
-  }
-}
-function lockPL() { plUnlocked = false; go('overview'); }
 function show(id) { go(id); }
 function toggleTask(el) {
   el.classList.toggle('checked');
   if (el.nextElementSibling) el.nextElementSibling.classList.toggle('checked-text');
 }
-document.getElementById('pl-overlay').addEventListener('click', function(e) {
-  if (e.target === this) this.classList.remove('visible');
-});
 // sections always visible, nav scrolls to them
 </script>
 
