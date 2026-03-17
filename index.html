@@ -50,6 +50,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 0 2rem;
 .hero-meta span { color: var(--blush); }
 .scroll-hint { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; animation: fadeIn 1s 1s ease both; }
 .scroll-hint span { font-size: 9px; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,0.2); }
+.mob-barre-break { display: none; }
 .scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, transparent, var(--blush)); animation: scrollPulse 2s infinite; }
 
 /* ABOUT */
@@ -288,13 +289,15 @@ footer { background: var(--ink); border-top: 1px solid rgba(255,255,255,0.06); p
 
   /* Hero */
   #hero { padding: 0 1.25rem 3rem; }
-  .hero-title { font-size: 11vw !important; line-height: .95; overflow-wrap: break-word; word-break: break-word; }
+  .hero-title { font-size: 13.5vw !important; line-height: .95; }
+  .mob-barre-break { display: block !important; }
   .hero-sub { font-size: 15px; margin-top: 1.25rem; }
   .hero-actions { flex-direction: column; gap: .75rem; }
   .hero-actions a { text-align: center; }
   .hero-meta { display: none; }
   .scroll-hint { display: none; }
   .hero-bg-text { display: none; }
+  .mob-barre-break { display: none; }
 
   /* About */
   #about { padding: 4rem 1.25rem; }
@@ -401,7 +404,7 @@ footer { background: var(--ink); border-top: 1px solid rgba(255,255,255,0.06); p
     <p class="hero-eyebrow">Hong Kong's first Barreformer studio</p>
     <h1 class="hero-title">
       REFORMER.<br>
-      <span class="accent">BARREFORMER.</span><br>
+      <span class="accent">BARREFORMER.<span class="mob-barre-break"></span></span><br>
       CENTRAL HK.
     </h1>
     <p class="hero-sub">Get a body worth showing off. Boutique pilates. Dancer-built. Max 6 per class.</p>
