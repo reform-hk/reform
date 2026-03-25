@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>REFORM. — Logo Export</title>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@900&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #111; font-family: 'Unbounded', sans-serif; padding: 2rem; min-height: 100vh; }
+h1 { color: #f0ede8; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; margin-bottom: 2rem; opacity: .4; }
+.section-title { color: #9a9590; font-size: 9px; letter-spacing: .2em; text-transform: uppercase; margin: 2.5rem 0 1rem; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 1.5rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+.logo-card { border-radius: 4px; overflow: hidden; display: flex; flex-direction: column; }
+.logo-preview { width: 100%; display: flex; align-items: center; justify-content: center; padding: 1.5rem; }
+.logo-preview.wide { aspect-ratio: 2.2/1; }
+.logo-preview.square { aspect-ratio: 1/1; }
+.logo-preview.tall { aspect-ratio: 3/4; }
+.logo-preview svg { max-width: 100%; max-height: 100%; display: block; }
+.logo-actions { display: flex; gap: 1px; }
+.dl-btn { flex: 1; padding: 9px 0; font-family: 'Unbounded', sans-serif; font-size: 8px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; border: none; cursor: pointer; transition: opacity .15s; }
+.dl-btn:hover { opacity: .8; }
+.dl-svg { background: #2a2a2a; color: #9a9590; }
+.dl-png { background: #c7999b; color: #fff; }
+.label { font-size: 8px; letter-spacing: .08em; text-transform: uppercase; color: #9a9590; padding: 6px 10px; background: #1a1a1a; line-height: 1.6; }
+</style>
+</head>
+<body>
+<h1>Reform. — Logo Export Kit</h1>
+<div class="section-title">Wordmark — REFORM.</div>
+<div class="grid" id="wm"></div>
+<div class="section-title">Icon mark</div>
+<div class="grid" id="icon"></div>
+<div class="section-title">Wordmark + icon (stacked)</div>
+<div class="grid" id="combo"></div>
+<div class="section-title">Square stamp</div>
+<div class="grid" id="stamp"></div>
+
+<script>
+const ICON_PATH = "M206.23 326.936C161.881 330.709 118.706 355.41 90.084 389.402L90.085 389.403C59.0238 426.322 43.7677 473.963 47.5566 522L47.752 524.288V524.294C51.6686 567.852 71.0532 608.564 102.393 639.063C134.586 668.887 163.666 682.592 206.114 688.888L206.168 363.412V363.407C206.18 354.548 206.705 336.732 206.24 326.935L206.23 326.936ZM248.716 326.654C248.296 348.457 248.657 370.89 248.634 392.829L248.596 531.79L248.752 633.598V633.602C248.761 650.716 248.265 671.528 248.864 688.761C291.335 682.729 324.313 667.483 355.494 636.746C378.791 611.848 394.611 586.021 402.75 552.881C429.214 445.068 358.722 340.921 248.716 326.654ZM248.607 203.401V203.404C248.599 228.758 247.853 258.503 248.618 283.608C262.752 285.183 275.414 287.126 289.655 291.105L289.688 291.115C331.796 303.273 369.286 327.742 397.364 361.355L398.694 362.964L398.702 362.974L398.711 362.983C400.563 365.274 404.153 370.287 407.469 374.862C407.751 375.251 408.033 375.637 408.312 376.02C408.637 345.212 408.236 313.432 408.227 282.684V282.682L408.237 240.056C408.237 230.368 408.465 220.147 407.703 210.928V210.92L407.702 210.913C404.511 170.522 387.455 132.477 359.42 103.229V103.228C334.007 76.9503 303.618 58.9786 267.933 50.9014V50.9023C262.907 49.7651 254.73 48.2663 248.543 47.6172L248.607 203.401ZM206.198 47.8828C164.383 50.9523 122.173 74.296 93.958 105.045C68.0864 133.331 51.9311 169.147 47.8486 207.266L47.8477 207.265C46.9075 216.619 46.8103 225.818 46.8379 235.259L46.8809 244.804V244.807L46.9932 291.371V291.377L47.0547 355.644H47.0537C47.0786 362.094 46.9093 368.999 46.9326 375.655C51.6901 369.119 56.3633 362.929 62.4014 356.17C95.3588 318.679 140.335 293.828 189.611 285.883L189.623 285.881L189.635 285.88C195.121 285.028 200.804 284.41 206.277 283.789L206.195 66.2441V66.2412C206.196 65.2251 206.213 63.5103 206.23 61.5049C206.248 59.4845 206.267 57.1386 206.269 54.8154C206.271 52.2011 206.249 49.7706 206.198 47.8828ZM451.001 459.516C451.006 496.117 453.285 530.612 443.372 567.212C433.746 602.742 415.973 634.341 391.176 661.35C351.295 704.89 295.571 730.546 236.564 732.529H236.555L236.546 732.53C175.951 734.273 121.654 715.287 76.7549 673.877C32.5542 633.334 6.4802 576.74 4.38477 516.794C3.65613 497.761 4.17994 475.876 4.22168 456.962L4.2793 359.739L4.24023 270.489C4.18973 235.922 2.28191 208.205 10.6572 173.369L10.6582 173.365C19.5493 136.534 37.7849 102.617 63.6045 74.8906C103.327 31.7033 158.709 6.25835 217.346 4.25293L217.637 4.23633L217.653 4.23535H217.67C277.534 1.62324 333.286 20.7929 377.772 61.4404C421.831 100.984 448.084 156.629 450.588 215.784L450.722 219.119C451.326 235.931 450.951 254.696 450.956 271.229L451.001 459.515V459.516Z";
+const colours = [{"id": "dual-sand-ink", "label": "Dual · Sand + Blush on ink", "bg": "#1a1a1a", "fg": "#f0ede8", "dot": "#c7999b", "previewBg": "#1a1a1a", "dual": true}, {"id": "dual-ink-sand", "label": "Dual · Ink + Blush on sand", "bg": "#f0ede8", "fg": "#1a1a1a", "dot": "#c7999b", "previewBg": "#f0ede8", "dual": true}, {"id": "dual-sand-trans", "label": "Dual · Sand + Blush / trans", "bg": "none", "fg": "#f0ede8", "dot": "#c7999b", "previewBg": "#1a1a1a", "dual": true}, {"id": "dual-ink-trans", "label": "Dual · Ink + Blush / trans", "bg": "none", "fg": "#1a1a1a", "dot": "#c7999b", "previewBg": "#f0ede8", "dual": true}, {"id": "mono-sand-trans", "label": "Mono · Sand / transparent", "bg": "none", "fg": "#f0ede8", "dot": "#f0ede8", "previewBg": "#1a1a1a", "dual": false}, {"id": "mono-ink-trans", "label": "Mono · Ink / transparent", "bg": "none", "fg": "#1a1a1a", "dot": "#1a1a1a", "previewBg": "#f0ede8", "dual": false}, {"id": "mono-blush-trans", "label": "Mono · Blush / transparent", "bg": "none", "fg": "#c7999b", "dot": "#c7999b", "previewBg": "#1a1a1a", "dual": false}, {"id": "mono-sand-ink", "label": "Mono · Sand on ink", "bg": "#1a1a1a", "fg": "#f0ede8", "dot": "#f0ede8", "previewBg": "#1a1a1a", "dual": false}, {"id": "mono-ink-sand", "label": "Mono · Ink on sand", "bg": "#f0ede8", "fg": "#1a1a1a", "dot": "#1a1a1a", "previewBg": "#f0ede8", "dual": false}];
+
+function svgWordmark(c) {
+  const w=800, h=150;
+  const bg = c.bg === 'none' ? '' : `<rect width="${w}" height="${h}" fill="${c.bg}"/>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}">
+  ${bg}
+  <text x="24" y="112" font-family="Unbounded,sans-serif" font-weight="900" font-size="96" fill="${c.fg}" letter-spacing="-1">REFORM<tspan fill="${c.dot}" dx="-3">.</tspan></text>
+</svg>`;
+}
+
+
+function svgIcon(c) {
+  const s=500;
+  const bg = c.bg === 'none' ? '' : `<rect width="${s}" height="${s}" fill="${c.bg}"/>`;
+  const pad=50, availW=s-pad*2, availH=s-pad*2;
+  const scale=Math.min(availW/456, availH/737);
+  const iw=456*scale, ih=737*scale;
+  const tx=(s-iw)/2, ty=(s-ih)/2;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${s} ${s}" width="${s}" height="${s}">
+  ${bg}
+  <g transform="translate(${tx},${ty}) scale(${scale})">
+    <path d="${ICON_PATH}" fill="${c.fg}" stroke="none"/>
+  </g>
+</svg>`;
+}
+
+function svgCombo(c) {
+  const w=1100, h=400;
+  const bg = c.bg === 'none' ? '' : `<rect width="${w}" height="${h}" fill="${c.bg}"/>`;
+  const pad = h * 0.15;
+  const availH = h - pad * 2;
+  const scale = Math.min((w * 0.18) / 456, availH / 737);
+  const iw = 456 * scale, ih = 737 * scale;
+  const iconX = w * 0.05;
+  const iconY = (h - ih) / 2;
+  const textX = iconX + iw + w * 0.05;
+  const textY = h * 0.63;
+  const fontSize = h * 0.26;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}">
+  ${bg}
+  <g transform="translate(${iconX},${iconY}) scale(${scale})">
+    <path d="${ICON_PATH}" fill="${c.fg}" stroke="none"/>
+  </g>
+  <text x="${textX}" y="${textY}" font-family="Unbounded,sans-serif" font-weight="900" font-size="${fontSize}" fill="${c.fg}" letter-spacing="-2">REFORM<tspan fill="${c.dot}" dx="-3">.</tspan></text>
+</svg>`;
+}
+
+
+function svgStamp(c) {
+  const s=500, pad=s*0.07;
+  const bg = c.bg === 'none' ? '' : `<rect width="${s}" height="${s}" fill="${c.bg}"/>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${s} ${s}" width="${s}" height="${s}">
+  ${bg}
+  <rect x="${pad}" y="${pad}" width="${s-pad*2}" height="${s-pad*2}" fill="none" stroke="${c.fg}" stroke-width="${s*0.016}"/>
+  <text x="${s/2}" y="${s*0.57}" font-family="Unbounded,sans-serif" font-weight="900" font-size="${s*0.175}" fill="${c.fg}" text-anchor="middle" letter-spacing="-1">REFORM<tspan fill="${c.dot}">.</tspan></text>
+  <text x="${s/2}" y="${s*0.72}" font-family="Unbounded,sans-serif" font-weight="900" font-size="${s*0.068}" fill="${c.dot}" text-anchor="middle" letter-spacing="${s*0.014}">CENTRAL HK</text>
+</svg>`;
+}
+
+function dlSVG(svgStr, name) {
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([svgStr], {type:'image/svg+xml'}));
+  a.download = name; a.click();
+}
+
+function dlPNG(svgEl, name) {
+  const vb = svgEl.viewBox.baseVal;
+  const canvas = document.createElement('canvas');
+  canvas.width = vb.width*3; canvas.height = vb.height*3;
+  const ctx = canvas.getContext('2d');
+  const blob = new Blob([new XMLSerializer().serializeToString(svgEl)], {type:'image/svg+xml'});
+  const url = URL.createObjectURL(blob);
+  const img = new Image();
+  img.onload = () => { ctx.drawImage(img,0,0,canvas.width,canvas.height); const a=document.createElement('a'); a.download=name; a.href=canvas.toDataURL('image/png'); a.click(); URL.revokeObjectURL(url); };
+  img.src = url;
+}
+
+function buildCard(c, svgStr, type, shape) {
+  const card = document.createElement('div');
+  card.className = 'logo-card';
+  const preview = document.createElement('div');
+  preview.className = 'logo-preview ' + shape;
+  preview.style.background = c.previewBg;
+  preview.innerHTML = svgStr;
+  const label = document.createElement('div');
+  label.className = 'label';
+  label.textContent = c.label;
+  const actions = document.createElement('div');
+  actions.className = 'logo-actions';
+  const s = document.createElement('button');
+  s.className='dl-btn dl-svg'; s.textContent='↓ SVG';
+  s.onclick = () => dlSVG(svgStr, `reform-${type}-${c.id}.svg`);
+  const p = document.createElement('button');
+  p.className='dl-btn dl-png'; p.textContent='↓ PNG @3x';
+  p.onclick = () => dlPNG(preview.querySelector('svg'), `reform-${type}-${c.id}.png`);
+  actions.append(s,p); card.append(preview,label,actions);
+  return card;
+}
+
+const configs = [
+  { id:'wm',    fn: svgWordmark, shape:'wide'   },
+  { id:'icon',  fn: svgIcon,     shape:'square' },
+  { id:'combo', fn: svgCombo,    shape:'wide'   },
+  { id:'stamp', fn: svgStamp,    shape:'square' },
+];
+
+configs.forEach(cfg => {
+  const grid = document.getElementById(cfg.id);
+  colours.forEach(c => grid.appendChild(buildCard(c, cfg.fn(c), cfg.id, cfg.shape)));
+});
+</script>
+</body>
+</html>
